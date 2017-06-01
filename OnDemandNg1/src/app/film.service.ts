@@ -1,4 +1,4 @@
-import { Film } from './models/film-model';
+import { Film } from './models/film.model';
 import { Injectable } from '@angular/core';
 
 @Injectable()

@@ -1,0 +1,33 @@
+﻿.footer{
+    height: 404px;
+    /*width: 100%;*/
+    background-color: #2D2D2D;
+}
+
+.footer-options{
+    margin-top: 80px;
+}
+
+.footer-logo {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.footer-rights{
+    margin-top: 28px;
+    text-align: center;
+    font-size: 10px;
+}
+
+p{
+    color: white;
+}
+
+.option {
+    cursor: pointer;
+}
+
+.option-list{
+    font-size: 12px;
+    cursor: pointer;
+}

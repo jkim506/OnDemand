@@ -1,5 +1,5 @@
 /**
- * ids match filename in assets for now (?)
+ * ids match filename in assets/film for now (?)
 */
 const films = [
     {

@@ -51,26 +51,26 @@ export class FilmService {
     },
     {
       title: 'Titanic',
-      year: '1997',
-      id: '30',
+      year: 1997,
+      id: 8,
       image: '/assets/films/titanic.jpg'
     },
     {
       title: 'The Lion King',
-      year: '1994',
-      id: '31',
+      year: 1994,
+      id: 9,
       image: '/assets/films/lion_king.jpg'
     },
     {
       title: 'Spirited Away',
-      year: '2001',
-      id: '32',
+      year: 2001,
+      id: 10,
       image: '/assets/films/spirited_away.jpg'
     },
     {
       title: 'Home Alone',
-      year: '1990',
-      id: '33',
+      year: 1990,
+      id: 11,
       image: '/assets/films/home_alone.jpg'
     }
   ];

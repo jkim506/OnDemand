@@ -1,6 +1,8 @@
 import { Film } from './models/film.model';
 import { Injectable } from '@angular/core';
 
+
+//Easily the best data service in the world
 @Injectable()
 export class FilmService {
 
@@ -46,6 +48,30 @@ export class FilmService {
       year: 2016,
       id: 7,
       image: '/assets/films/yourname.jpg'
+    },
+    {
+      title: 'Titanic',
+      year: '1997',
+      id: '30',
+      image: '/assets/films/titanic.jpg'
+    },
+    {
+      title: 'The Lion King',
+      year: '1994',
+      id: '31',
+      image: '/assets/films/lion_king.jpg'
+    },
+    {
+      title: 'Spirited Away',
+      year: '2001',
+      id: '32',
+      image: '/assets/films/spirited_away.jpg'
+    },
+    {
+      title: 'Home Alone',
+      year: '1990',
+      id: '33',
+      image: '/assets/films/home_alone.jpg'
     }
   ];
 

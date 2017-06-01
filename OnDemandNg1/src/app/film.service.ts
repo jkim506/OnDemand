@@ -27,6 +27,24 @@ export class FilmService {
       year: '1980',
       id: '12',
       image: '/assets/films/returnofthejedi.jpg'
+    },
+    {
+      title: 'The Little Mermaid',
+      year: '1989',
+      id: '13',
+      image: '/assets/films/mermaid.jpg'
+    },
+    {
+      title: 'Forrest Gump ',
+      year: '1994',
+      id: '14',
+      image: '/assets/films/forrestGump.jpg'
+    },
+    {
+      title: 'Your Name',
+      year: '2016',
+      id: '15',
+      image: '/assets/films/yourname.jpg'
     }
   ];
 

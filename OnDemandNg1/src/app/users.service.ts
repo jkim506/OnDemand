@@ -9,4 +9,16 @@ export class UsersService {
 
   constructor() {
   }
+
+  public getUsers(): User[] {
+    return this.users;
+  }
+
+  public getFirstUser(): User {
+    return this.users[0];
+  }
+
+  public getTheArab(): User {
+    return this.users[4];
+  }
 }

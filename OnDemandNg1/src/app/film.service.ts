@@ -77,7 +77,15 @@ export class FilmService {
 
   constructor() { }
 
-  getFilms(): Film[] {
+  public getFilms(): Film[] {
     return this.films;
+  }
+
+  public getSpiritedAway(): Film {
+    return this.films.find(f => f.id == 10);
+  }
+
+  public getYourName(): Film {
+    return this.films.find(f => f.id == 7);
   }
 }

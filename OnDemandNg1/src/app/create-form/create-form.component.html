@@ -25,6 +25,15 @@
     <div class="form-section">
       <div class="section-number">2</div>
       <div class="section-title">Choose the film format and screen type</div>
+      <div class="multi-select">
+        <div class="selected" (click)="setProp('screenType', 'Regular')">Regular</div>
+        <div (click)="setProp('screenType', 'IMAX')">IMAX</div>
+        <div (click)="setProp('screenType', 'Gold Class')">Gold Class</div>
+      </div>
+      <div class="multi-select">
+        <div class="selected" (click)="setProp('format', '2D')">2D</div>
+        <div (click)="setProp('format', '3D')">3D</div>
+      </div>
     </div>
     <div class="form-section">
       <div class="section-number">3</div>
@@ -33,11 +42,15 @@
     <div class="form-section">
       <div class="section-number">4</div>
       <div class="section-title">Choose a date and time to show this film</div>
-      <div class="fake-input">
-        Saturday 15th July, 2017
+      <div class="fake-input" style="width: 300px;">
+        {{newEvent.date}}
         <img src="../assets/icons/calendar.png">
       </div>
-      <div class="multi-select"></div>
+      <div class="multi-select" style="margin-left: 30px;">
+        <div class="selected" [class.selected]="true" (click)="setProp('time', '5:00 pm')">5pm</div>
+        <div class="selected" (click)="setProp('time', '7:00 pm')">7pm</div>
+        <div class="selected" (click)="setProp('time', '9:00 pm')">9pm</div>
+      </div>
     </div>
   </ng-container>
 </div>

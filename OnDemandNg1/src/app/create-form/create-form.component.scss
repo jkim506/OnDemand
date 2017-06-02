@@ -3,6 +3,8 @@ $dark-pink: darken($pink, 20%);
 $green: #48D5A3;
 $prog-h: 40px;
 $num-size: 34px;
+$input-height: 46px;
+$border-color: rgba(0,0,0,0.2);
 
 .form-container {
   margin: 100px auto;
@@ -101,16 +103,18 @@ $num-size: 34px;
   font-weight: bold;
   color: black;
   line-height: $num-size;
+  margin-bottom: 20px;
 }
 
 .fake-input {
-  height: 46px;
+  height: $input-height;
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 6px;
   background-color: white;
   padding: 0 15px;
   color: black;
-  line-height: 46px;
+  line-height: $input-height;
+  position: relative;
 
   img {
     height: 20px;
@@ -119,5 +123,42 @@ $num-size: 34px;
     right: 20px;
     bottom: 13px;
     opacity: 0.4;
+  }
+}
+
+.multi-select {
+  display: inline-block;
+  margin-right: 30px;
+  height: $input-height;
+  line-height: 0;
+  font-size: 0;
+  > div {
+    display: inline-block;
+    line-height: $input-height;
+    color: black;
+    background-color: white;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: bold;
+
+    border: 1px solid $border-color;
+    border-right-width: 0px;
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-right-width: 1px;
+    }
+
+    &.selected {
+      background-color: $green;
+      color: white;
+      border-color: darken($green, 10%);
+    }
   }
 }

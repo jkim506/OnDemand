@@ -1,5 +1,5 @@
 :host {
-  .hero {
+  .hero-monster {
     height: 500px;
     background: url('../../assets/monster-hero.jpg');
     background-size: cover;
@@ -17,5 +17,54 @@
         font-size: 1.5em;
       }
     }
+  }
+
+  .hero-catalog {
+    height: 400px;
+    background: url('../../assets/catalog-hero.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+
+    section {
+      color: white;
+      text-align: center;
+      h1 {
+        font-size: 2em;
+      }
+      .steps-container {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: row;
+
+        .step {
+          display: flex;
+          flex-direction: row;
+          padding: 20px;
+
+          h3 {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-nippo {
+    height: 500px;
+    background: url('../../assets/nippo-hero.png');
+    background-size: cover;
+  }
+
+  .btn-transparent {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 20px 50px;
+    font-family: sf;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
   }
 }

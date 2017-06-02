@@ -4,11 +4,12 @@
   min-height: $radius;
   max-width: $radius;
   max-height: $radius;
-  padding: ($radius - $fontSize)/4;
+  padding: ($radius - $fontSize)/2;
   background: $bgcolor;
   color: $fgcolor;
   text-align: center;
   font-size: $fontSize;
+  line-height: $fontSize;
 }
 
 
@@ -44,7 +45,6 @@
     }
   }
 
-
   .hero-catalog {
     height: 400px;
     background: url('../../assets/catalog-hero.png');
@@ -59,17 +59,25 @@
       text-align: center;
       h1 {
         font-size: 2em;
+        font-weight: bold;
       }
       .steps-container {
         padding: 20px 10px;
         display: flex;
         flex-direction: row;
-
         .step {
           display: flex;
           flex-direction: row;
           padding: 20px;
-
+          align-items: center;
+          .step-number-container {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            .step-number {
+              @include colored-circle(white, cyan, 80px, 50px);
+            }
+          }
           h3 {
             font-size: 1.5em;
           }
@@ -153,5 +161,8 @@
     font-family: sf;
     font-size: 1.2em;
     letter-spacing: 0.1em;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

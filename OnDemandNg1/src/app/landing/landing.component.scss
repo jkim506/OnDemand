@@ -19,10 +19,17 @@
     }
   }
 
-  .event-cards-container-vertical {
+  .hero-event-cards {
+    margin-top: -100px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    .event-cards-container-vertical {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+    }
   }
+
 
   .hero-catalog {
     height: 400px;
@@ -63,6 +70,10 @@
     align-items: center;
     margin: 100px 0;
 
+    > h1 {
+      padding-bottom: 50px;
+    }
+
     .row-horizontal {
       width: 80%;
       display: flex;
@@ -75,17 +86,36 @@
         flex-direction: row;
         div {
           padding: 0 20px;
+          text-align: center;
           &:hover {
             cursor: pointer;
           }
           &.active {
             border-bottom: 3px solid #2BD7A4;
+            cursor: default;
           }
         }
       }
       .fake-buttons {
         display: flex;
         flex-direction: row;
+        padding-bottom: 10px;
+        .fake-button {
+          display: flex;
+          flex-direction: row;
+          padding: 0 20px;
+          div {
+            padding-left: 10px;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          .see-all {
+            padding: 7px 12px;
+            font-family: sf;
+            font-weight: bold;
+          }
+        }
       }
     }
     .event-cards-container {

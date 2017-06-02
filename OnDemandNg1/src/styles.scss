@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/scss/bootstrap";
+$icon-size: 1.5em;
 
 html, body {
   height: 100%;
@@ -39,4 +40,24 @@ a, a:active, a:visited {
   font-family: sf;
   src: url(assets/fonts/sf-ui-display-bold.otf);
   font-weight: bold;
+}
+
+.icon {
+  display: inline-block;
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.icon-grid {
+  background: url(assets/icons/icon-grid.png) center no-repeat;
+  background-size: $icon-size;
+}
+
+.icon-calendar {
+
+}
+
+.icon-caret {
+  background: url(assets/icons/caret-black.png) center no-repeat;
+  background-size: 0.5em;
 }

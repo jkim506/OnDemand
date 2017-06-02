@@ -6,10 +6,11 @@
   </section>
 </div>
 
-<div class="event-cards-container-vertical">
-  <app-event-card-vertical [event]="eventService.getEvents()[0]"></app-event-card-vertical>
-  <app-event-card-vertical [event]="eventService.getEvents()[1]"></app-event-card-vertical>
-
+<div class="hero-event-cards">
+  <div class="event-cards-container-vertical">
+    <app-event-card-vertical [event]="eventService.getEvents()[0]"></app-event-card-vertical>
+    <app-event-card-vertical [event]="eventService.getEvents()[1]"></app-event-card-vertical>
+  </div>
 </div>
 
 <div class="hero-catalog">
@@ -41,9 +42,15 @@
       <div>Fake Tab</div>
     </div>
     <div class="fake-buttons">
-      <button>Fake</button>
-      <button>Fake</button>
-      <button>Fake</button>
+      <div class="fake-button">
+        <span class="icon icon-grid"></span><div>All Genres</div><span class="icon icon-caret"></span>
+      </div>
+      <div class="fake-button">
+        <span class="icon icon-grid"></span><div>This Weekend</div><span class="icon icon-caret"></span>
+      </div>
+      <div class="fake-button">
+        <button type="button" class="btn btn-sm btn-secondary see-all">See All</button>
+      </div>
     </div>
   </div>
   <div class="event-cards-container">

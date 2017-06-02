@@ -10,5 +10,6 @@ export class Event {
     approved: boolean;
     attendees: User[];
     film: Film;
-    date: Date;
+    date: string;
+    time: string;
 }

@@ -1,0 +1,112 @@
+.ond-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-content: flex-start;
+  z-index: 99999;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.ond-header-option {
+  flex: 0 0 auto;
+  line-height: 70px;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 35px;
+}
+.ond-header-option span {
+  vertical-align: middle;
+}
+.ond-header-option .pill {
+  margin-left: 5px;
+  background-color: #2BD7A4;
+  color: white;
+  border-radius: 15px;
+  padding: 3px 6px;
+  font-size: 12px;
+}
+.ond-header-option .request {
+  padding: 4px 6px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+}
+
+.header-logo {
+  width: 120px;
+  position: absolute;
+  height: 41px;
+  left: 50%;
+  margin-left: -60px;
+  top: 15px;
+  display: block;
+  background-image: url('../assets/icons/logo-pink.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.ond-wrapper {
+  padding-top: 70px;
+  background-color: #F6F6F6;
+  height: 100%;
+  box-sizing: border-box;
+
+}
+
+.ond-header-user {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  float: right;
+  top: 17px;
+}
+.ond-header-user img {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.ond-footer {
+  display: block;
+  padding: 60px;
+  background-color: #2D2D2D;
+  color: white;
+  font-weight: 200;
+  font-size: 12px;
+}
+.footer-row {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.footer-column {
+  flex: 1 1 auto;
+  width: 33%;
+  padding: 0 20px;
+}
+.footer-row a {
+  color: white;
+  display: block;
+  line-height: 16px;
+}
+.column-head {
+  font-size: 13px;
+  font-weight: 500;
+}
+.ond-footer .rr {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 200;
+}
+.footer-row.logo {
+  height: 150px;
+  background-image: url('../assets/icons/logo-mono.png');
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

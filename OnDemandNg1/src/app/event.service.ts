@@ -28,7 +28,7 @@ export class EventService {
       attendees: [this.userService.getFirstUser()],
       date: 'Sunday, 19th April',
       time: '9:00 pm',
-      film: this.filmService.getFilms()[2]      
+      film: this.filmService.getFilms()[2]
     }
   ]
 
@@ -46,10 +46,10 @@ export class EventService {
       }).id + 1;
     }
     this.events.push(newEvent);
-  } 
+  }
 
   public addUserToEvent(user: User, eventId: number) {
     const event = this.events.find(e => e.id == eventId);
-    event.attendees.push(user); 
-  } 
+    event.attendees.push(user);
+  }
 }

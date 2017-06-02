@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { DetailComponent } from './detail/detail.component';
 import { CreateFormComponent } from './create-form/create-form.component';
-import { MaterialModule } from '@angular/material';
 
 import { EventService } from './event.service';
 import { UsersService } from './users.service';
@@ -44,7 +43,6 @@ const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
     AlertModule.forRoot()

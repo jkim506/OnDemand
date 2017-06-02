@@ -13,6 +13,7 @@ import { UsersService } from './users.service';
 import { FilmService } from './film.service';
 import { EventCardComponent } from './event-card/event-card.component';
 import { HttpModule } from '@angular/http';
+import { EventCardVerticalComponent } from './event-card-vertical/event-card-vertical.component';
 
 const ROUTES: Routes = [
   {
@@ -40,7 +41,8 @@ const ROUTES: Routes = [
     LandingComponent,
     DetailComponent,
     CreateFormComponent,
-    EventCardComponent
+    EventCardComponent,
+    EventCardVerticalComponent
   ],
   imports: [
     BrowserModule,

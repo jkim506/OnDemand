@@ -1,0 +1,46 @@
+<div class="container event-card" (click)="goToEventDetails()">
+  <div class="row">
+    <div class="col-md-12 thumbnail-container">
+      <img src="{{event.film.image}}" class="thumbnail"/>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="details-container">
+            <div class="row title">
+                <p class="title-text">{{event.film.title}}</p>
+            </div>
+            <div class="row">
+                <div class="year">
+                    {{event.film.year}}
+                </div>
+            </div>
+            <div class="row" style="height: 20px; margin-top: 18px;">
+                <div class="col-md-5 scheduled">
+                    Scheduled
+                </div>
+                <div class="col-md-7 seats-left">
+                    {{event.capacity - event.attendees.length}} seats left
+                </div>
+            </div>
+            <div class="row">
+                <div class="bar">
+                </div>
+            </div>
+            <div class="row organizer">
+                <img src="{{event.eventOrganiser.image}}" class="organizer-image"/>
+                <div class="organizer-text">
+                    Organised by {{event.eventOrganiser.name}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="event-details">
+                    <div class="time">{{event.time}}</div>
+                    <div class="date-location">{{event.date}}</div>
+                    <div class="date-location">{{event.location}}</div>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>

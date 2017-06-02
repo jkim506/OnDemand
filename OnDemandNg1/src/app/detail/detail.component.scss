@@ -1,0 +1,39 @@
+
+.background-picture {
+    height: 449px;
+    background: url('../../assets/yourname-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section {
+    height: 1444px;
+    width: 100%;
+
+    .film-picture {
+        top: 269px;
+        width: 225px;
+        height: 311px;
+        margin-left: 256px;
+        position: absolute;
+        border-radius: 4px;
+        background: url('../../assets/your-name.png');
+        background-size: contain;
+        display: flex;
+        align-items: flex-end;
+        .trailer-play {
+            height: 39px;
+            width: 225px;
+            opacity: 0.9;
+            background-color: #ffffff;
+            text-align: center;
+            span {
+                padding-top: 13px;
+                font-family: Graphik;
+                font-size: 14px;
+                font-weight: 500;
+                color: #000000;
+            }
+
+        }
+    }
+}

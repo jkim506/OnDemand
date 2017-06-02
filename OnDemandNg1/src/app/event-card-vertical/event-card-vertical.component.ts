@@ -3,11 +3,11 @@ import { Event } from '../models/event.model';
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-event-card',
-  templateUrl: './event-card.component.html',
-  styleUrls: ['./event-card.component.scss']
+  selector: 'app-event-card-vertical',
+  templateUrl: './event-card-vertical.component.html',
+  styleUrls: ['./event-card-vertical.component.scss']
 })
-export class EventCardComponent implements OnInit {
+export class EventCardVerticalComponent implements OnInit {
 
   @Input() event: Event;
 

@@ -6,20 +6,14 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class FilmService {
 
-  public films: Film[] = [
-    {
-      title: 'Fast & Furious',
-      year: 2005,
-      id: 1,
-      image: '/assets/films/ff.jpg'
-    },
+  public films = [
     {
       title: 'Star Wars: Episode IV - A New Hope',
       year: 1977,
       id: 2,
       image: '/assets/films/a_new_hope.jpg'
     },
-      {
+    {
       title: 'Star Wars: Episode V - The Empire Strikes Back',
       year: 1980,
       id: 3,
@@ -72,6 +66,24 @@ export class FilmService {
       year: 1990,
       id: 11,
       image: '/assets/films/home_alone.jpg'
+    },
+    {
+      title: 'Godzilla',
+      year: '1954',
+      id: 16,
+      image: '/assets/films/godzilla.jpg'
+    },
+    {
+      title: 'Akira',
+      year: '1988',
+      id: 17,
+      image: '/assets/films/akira.jpg'
+    },
+    {
+      title: 'Ghost in the Shell',
+      year: '1995',
+      id: 18,
+      image: '/assets/films/ghostintheshell.jpg'
     }
   ];
 
@@ -82,10 +94,10 @@ export class FilmService {
   }
 
   public getSpiritedAway(): Film {
-    return this.films.find(f => f.id == 10);
+    return this.films.find(f => f.id == 10) as Film;
   }
 
   public getYourName(): Film {
-    return this.films.find(f => f.id == 7);
+    return this.films.find(f => f.id == 7) as Film;
   }
 }

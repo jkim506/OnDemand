@@ -1,3 +1,46 @@
+<div class="ond-header">
+  <a routerLink="'home'" class="ond-header-option">
+    <span>Explore</span></a>
+  <a href="" class="ond-header-option">
+    <span>For You</span>
+    <span class="pill">3</span>
+  </a>
+  <a href="" routerLink="event/new" class="ond-header-option">
+    <span class="border">Request a Film</span>
+  </a>
 
-<router-outlet></router-outlet>
+  <a class="header-logo" routerLink="''">
+  </a>
+  <div class="ond-header-option ond-header-user">
+    <img class="user-image" src="{{activeUser.image}}">
+  </div>
+</div>
+<div class="ond-wrapper">
+  <router-outlet></router-outlet>
+
+  <div class="ond-footer">
+    <div class="footer-row">
+      <div class="footer-column">
+          <p class="column-head">Cinemas</p>
+          <a href="">Locations</a>
+          <a href="">Facilities</a>
+      </div>
+      <div class="footer-column">
+          <p class="column-head">About</p>
+          <a href="">About OnDemand</a>
+          <a href="">Terms of Service</a>
+          <a href="">Film Backlog</a>
+      </div>
+      <div class="footer-column">
+        <p class="column-head">Contact Us</p>
+        <a href="">Contact OnDemand</a>
+        <a href="">Support Desk</a>
+      </div>
+    </div>
+    <div class="logo footer-row">
+
+    </div>
+    <div class="rr">©2001-2017 All Rights Reserved. OnDemand® is a registered trademark of ABC Cinemas Group. Privacy and Terms</div>
+  </div>
+</div>
 

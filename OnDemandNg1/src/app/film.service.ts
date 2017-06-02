@@ -1,6 +1,9 @@
 import { Film } from './models/film.model';
 import { Injectable } from '@angular/core';
-
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 //Easily the best data service in the world
 @Injectable()
@@ -87,7 +90,9 @@ export class FilmService {
     }
   ];
 
-  constructor() { }
+  constructor(private http: Http) {
+
+   }
 
   public getFilms(): Film[] {
     return this.films;
@@ -100,4 +105,31 @@ export class FilmService {
   public getYourName(): Film {
     return this.films.find(f => f.id == 7) as Film;
   }
+
+  public getFilmsFromMovieExchange(): Observable<Film[]> {
+    return this.http.get('http://localhost:61583/api/film')
+                    .map(this.extractData)
+                    .catch(this.handleError);         
+  }
+
+  private extractData(res: Response) {
+    let body = res.json() as mxContract;
+    return body || { };
+  }
+
+  private handleError (error: Response | any) {
+    let errMsg: string;
+    if (error instanceof Response) {
+      const body = error.json() || '';
+      const err = body.error || JSON.stringify(body);
+      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+    } else {
+      errMsg = error.message ? error.message : error.toString();
+    }
+    return Observable.throw(errMsg);
+  }
+}
+
+export class mxContract {
+  title: string;
 }

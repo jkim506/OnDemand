@@ -1,3 +1,43 @@
-<p>
-  create-form works!
-</p>
+<div class="form-container">
+  <div class="form-header">
+    <h2>Request a Film</h2>
+    <div class="progress-tracker">
+      <div class="progress-state" (click)="setFormSection(1)" [class.active]="activeFormSection === 1" [class.complete]="activeFormSection > 1">Film
+        and Cinema
+      </div>
+      <div class="progress-state" (click)="setFormSection(2)" [class.active]="activeFormSection === 2" [class.complete]="activeFormSection > 2">
+        Event Details
+      </div>
+      <div class="progress-state" (click)="setFormSection(3)" [class.active]="activeFormSection === 3" [class.complete]="activeFormSection > 3">
+        Summary
+      </div>
+      <div class="progress-state" (click)="setFormSection(4)" [class.active]="activeFormSection === 4" [class.complete]="activeFormSection >= 4">
+        Share
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="activeFormSection === 1">
+    <div class="form-section">
+      <div class="section-number">1</div>
+      <div class="section-title">Choose the film you would like to request</div>
+    </div>
+    <div class="form-section">
+      <div class="section-number">2</div>
+      <div class="section-title">Choose the film format and screen type</div>
+    </div>
+    <div class="form-section">
+      <div class="section-number">3</div>
+      <div class="section-title">Choose a Cinema you would like to host the screening</div>
+    </div>
+    <div class="form-section">
+      <div class="section-number">4</div>
+      <div class="section-title">Choose a date and time to show this film</div>
+      <div class="fake-input">
+        Saturday 15th July, 2017
+        <img src="../assets/icons/calendar.png">
+      </div>
+      <div class="multi-select"></div>
+    </div>
+  </ng-container>
+</div>

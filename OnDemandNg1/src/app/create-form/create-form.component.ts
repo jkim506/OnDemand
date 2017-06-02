@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateFormComponent implements OnInit {
 
+  // request details summary share
+  public activeFormSection = 2;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public setFormSection(section) {
+    this.activeFormSection = section;
   }
 
 }

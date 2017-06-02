@@ -12,7 +12,13 @@ a, a:active, a:visited {
 
 @font-face {
   font-family: graphik;
+  src: url(assets/fonts/graphik-regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: graphik;
   src: url(assets/fonts/graphik-medium.otf);
+  font-weight: 600;
 }
 
 @font-face {

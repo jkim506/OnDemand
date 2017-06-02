@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { DetailComponent } from './detail/detail.component';
@@ -46,7 +46,8 @@ const ROUTES: Routes = [
     BrowserModule,
     MaterialModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    AlertModule.forRoot()
   ],
   providers: [ EventService, FilmService, UsersService ],
   bootstrap: [AppComponent]

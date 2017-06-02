@@ -12,6 +12,7 @@ import { EventService } from './event.service';
 import { UsersService } from './users.service';
 import { FilmService } from './film.service';
 import { EventCardComponent } from './event-card/event-card.component';
+import { HttpModule } from '@angular/http';
 
 const ROUTES: Routes = [
   {
@@ -43,6 +44,7 @@ const ROUTES: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
     AlertModule.forRoot()

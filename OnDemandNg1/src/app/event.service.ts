@@ -15,7 +15,8 @@ export class EventService {
       capacity: 100,
       approved: true,
       attendees: this.userService.getUsers(),
-      date: new Date(),
+      date: 'Saturday, 17th April',
+      time: '7:00 pm',
       film: this.filmService.getSpiritedAway()
     },
     {
@@ -25,7 +26,8 @@ export class EventService {
       capacity: 10,
       approved: false,
       attendees: [this.userService.getFirstUser()],
-      date: new Date(),
+      date: 'Sunday, 19th April',
+      time: '9:00 pm',
       film: this.filmService.getFilms()[2]      
     }
   ]

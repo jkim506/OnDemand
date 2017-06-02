@@ -1,25 +1,23 @@
 <div class="container event-card" (click)="goToEventDetails()">
   <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-5">
         <img src="{{event.film.image}}" class="thumbnail"/>
       </div>
-      <div class="col-md-8">
-        <div class="row">
-          <div class="title">
-            {{event.film.title}}
-          </div>
+      <div class="col-md-7">
+        <div class="row title">
+          <p class="title-text">{{event.film.title}}</p>
         </div>
         <div class="row">
           <div class="year">
             {{event.film.year}}
           </div>
         </div>
-        <div class="row">
-          <div class="">
-
+        <div class="row" style="height: 20px; margin-top: 18px;">
+          <div class="col-md-6 scheduled">
+            Scheduled
           </div>
-          <div class="seats-left">
-            {{event.capacity - event.attendees.length}}
+          <div class="col-md-6 seats-left">
+            {{event.capacity - event.attendees.length}} seats left
           </div>
         </div>
         <div class="row">
@@ -27,19 +25,17 @@
 
           </div>
         </div>
-        <div class="row">
-          <div class="organizer">
-            <img src="{{event.eventOrganiser.image}}"/>
-            <div>
+        <div class="row organizer">
+            <img src="{{event.eventOrganiser.image}}" class="organizer-image"/>
+            <div class="organizer-text">
               Organised by {{event.eventOrganiser.name}}
             </div>
-          </div>
         </div>
         <div class="row">
           <div class="event-details">
-            <div></div>
-            <div></div>
-            <div>{{event.location}}</div>
+            <div class="time">{{event.time}}</div>
+            <div class="date-location">{{event.date}}</div>
+            <div class="date-location">{{event.location}}</div>
           </div>
         </div>
       </div>

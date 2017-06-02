@@ -5,12 +5,6 @@ export class FilmService {
 
   public films = [
     {
-      title: 'Fast & Furious',
-      year: 2005,
-      id: 1,
-      image: '/assets/films/ff.jpg'
-    },
-    {
       title: 'Star Wars: Episode IV - A New Hope',
       year: '1977',
       id: '10',
@@ -45,6 +39,24 @@ export class FilmService {
       year: '2016',
       id: '15',
       image: '/assets/films/yourname.jpg'
+    },
+    {
+      title: 'Godzilla',
+      year: '1954',
+      id: '16',
+      image: '/assets/films/godzilla.jpg'
+    },
+    {
+      title: 'Akira',
+      year: '1988',
+      id: '17',
+      image: '/assets/films/akira.jpg'
+    },
+    {
+      title: 'Ghost in the Shell',
+      year: '1995',
+      id: '18',
+      image: '/assets/films/ghostintheshell.jpg'
     }
   ];
 

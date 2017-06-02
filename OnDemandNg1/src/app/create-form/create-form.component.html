@@ -26,18 +26,22 @@
       <div class="section-number">2</div>
       <div class="section-title">Choose the film format and screen type</div>
       <div class="multi-select">
-        <div class="selected" (click)="setProp('screenType', 'Regular')">Regular</div>
-        <div (click)="setProp('screenType', 'IMAX')">IMAX</div>
-        <div (click)="setProp('screenType', 'Gold Class')">Gold Class</div>
+        <div [class.selected]="newEvent.screenType === 'Regular'" (click)="setProp('screenType', 'Regular')">Regular</div>
+        <div [class.selected]="newEvent.screenType === 'IMAX'" (click)="setProp('screenType', 'IMAX')">IMAX</div>
+        <div [class.selected]="newEvent.screenType === 'Gold Class'" (click)="setProp('screenType', 'Gold Class')">Gold Class</div>
       </div>
       <div class="multi-select">
-        <div class="selected" (click)="setProp('format', '2D')">2D</div>
-        <div (click)="setProp('format', '3D')">3D</div>
+        <div [class.selected]="newEvent.format === '2D'" (click)="setProp('format', '2D')">2D</div>
+        <div [class.selected]="newEvent.screenType === '3D'" (click)="setProp('screenType', '3D')">3D</div>
       </div>
     </div>
-    <div class="form-section">
+    <div class="form-section" style="min-height: 410px;">
       <div class="section-number">3</div>
       <div class="section-title">Choose a Cinema you would like to host the screening</div>
+      <div class="fake-input" style="width: 330px;">Cinemas near you
+        <img src="../assets/icons/caret-black.png">
+      </div>
+      <img class="fake-cinema-map" src="../assets/cinema.PNG">
     </div>
     <div class="form-section">
       <div class="section-number">4</div>
@@ -47,10 +51,30 @@
         <img src="../assets/icons/calendar.png">
       </div>
       <div class="multi-select" style="margin-left: 30px;">
-        <div class="selected" [class.selected]="true" (click)="setProp('time', '5:00 pm')">5pm</div>
-        <div class="selected" (click)="setProp('time', '7:00 pm')">7pm</div>
-        <div class="selected" (click)="setProp('time', '9:00 pm')">9pm</div>
+        <div [class.selected]="newEvent.time === '5:00 pm'" (click)="setProp('time', '5:00 pm')">5pm</div>
+        <div [class.selected]="newEvent.time === '7:00 pm'" (click)="setProp('time', '7:00 pm')">7pm</div>
+        <div [class.selected]="newEvent.time === '9:00 pm'" (click)="setProp('time', '9:00 pm')">9pm</div>
       </div>
     </div>
+
+    <a class="fake-input form-button pink" (click)="setFormSection(2)">Continue</a>
+  </ng-container>
+
+
+  <ng-container *ngIf="activeFormSection === 2">
+    <div class="form-section">
+      <div class="section-number">5</div>
+      <div class="section-title">Choose ticket prices
+        <span class="sub-title">Choose which ticket types are available for sale. You can also specify a Custom Price above Cinema Price for additional profit</span>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="section-number">6</div>
+      <div class="section-title">Write an Event Description to promote your event</div>
+      <textarea (blur)="onDescriptionBlur($event)" class="fake-input event-description" placeholder="e.g. Welcome to my screening of Your Name"></textarea>
+    </div>
+
+    <a class="fake-input form-button pink-clear" (click)="setFormSection(1)">Back</a>
+    <a class="fake-input form-button pink" (click)="setFormSection(3)">Continue</a>
   </ng-container>
 </div>

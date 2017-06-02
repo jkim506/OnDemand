@@ -12,6 +12,7 @@ $border-color: rgba(0,0,0,0.2);
 }
 
 .form-header {
+  margin-bottom: 50px;
   h2 {
     font-family: sf;
     font-weight: bold;
@@ -62,6 +63,7 @@ $border-color: rgba(0,0,0,0.2);
   color: white;
   &:after {
     background-color: $pink;
+    box-shadow: 1px -1px 0 0 rgba(255,255,255,0.2);
   }
 }
 .progress-state.complete {
@@ -69,6 +71,7 @@ $border-color: rgba(0,0,0,0.2);
   color: white;
   &:after {
     background-color: $dark-pink;
+    box-shadow: 1px -1px 0 0 rgba(255,255,255,0.2);
   }
 }
 
@@ -79,7 +82,7 @@ $border-color: rgba(0,0,0,0.2);
 }
 
 .form-section {
-  margin-top: 50px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -115,6 +118,9 @@ $border-color: rgba(0,0,0,0.2);
   color: black;
   line-height: $input-height;
   position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
 
   img {
     height: 20px;
@@ -161,4 +167,44 @@ $border-color: rgba(0,0,0,0.2);
       border-color: darken($green, 10%);
     }
   }
+}
+.fake-cinema-map {
+  border-radius: 6px;
+  border: 1px solid $border-color;
+  width: 540px;
+  height: auto;
+  position: absolute;
+  left: 360px;
+  top: 53px;
+}
+
+.fake-input.form-button.pink {
+  border-color: lighten($pink, 10%);
+  background-color: $pink;
+  color: white;
+  padding: 0 30px;
+}
+.fake-input.form-button.pink-clear {
+  border-color: transparent;
+  background-color: transparent;
+  color: $pink;
+  padding: 0 30px;
+  margin-right: 30px;
+}
+
+.fake-input.event-description {
+  height: 350px;
+  width: 1000px;
+  font-weight: normal;
+  &:focus {
+    outline: none;
+  }
+}
+
+.sub-title {
+  display: block;
+  font-size: 10px;
+  font-weight: 200;
+  width: 100%;
+  line-height: 16px;
 }

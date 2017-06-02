@@ -1,0 +1,49 @@
+.event-card{
+  box-sizing: border-box;
+  height: 251px;
+  width: 371px;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+  background-color: #FFFFFF; 
+}
+
+.thumbnail{
+  height: 164px;
+  width: 118.64px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  margin-top: 18px;
+  margin-left: 18px;
+}
+
+.title{
+
+}
+
+.year{
+
+}
+
+.scheduled{
+
+}
+
+.not-scheduled{
+
+}
+
+.seats-left{
+
+}
+
+.bar {
+
+}
+
+.organizer{
+
+}
+
+.event-details{
+
+}

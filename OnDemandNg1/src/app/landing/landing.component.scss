@@ -47,7 +47,10 @@
 
   .hero-catalog {
     height: 400px;
-    background: url('../../assets/catalog-hero.png');
+    width: 95%;
+    border-radius: 1em;
+    margin: 0 auto;
+    background: url('../../assets/catalog-hero.png') no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -75,6 +78,7 @@
             display: flex;
             justify-content: flex-end;
             .step-number {
+              font-weight: lighter;
               @include colored-circle(white, cyan, 80px, 50px);
             }
           }
@@ -102,12 +106,13 @@
       flex-direction: row;
       justify-content: space-between;
       font-size: 1em;
-
+      font-weight: bold;
       .fake-tabs {
         display: flex;
         flex-direction: row;
         div {
-          padding: 0 20px;
+          padding: 0 10px;
+          margin: 0 10px;
           text-align: center;
           &:hover {
             cursor: pointer;
@@ -142,15 +147,29 @@
     }
     .event-cards-container {
       width: 100%;
+      padding-top: 50px;
       background: linear-gradient(0deg, #FFFFFF 0%, #F8F8F8 100%);
+      display: flex;
+      flex-direction: column;
+      .event-cards-row {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10%;
+        overflow: hidden;
+        app-event-card {
+          margin: 0 20px 20px 0;
+        }
+      }
     }
   }
 
   .hero-nippo {
     border-top: 1px solid #DCDEDD;
-    height: 500px;
-    background: url('../../assets/nippo-hero.png');
-    background-size: cover;
+    background-color: #F6F6F6;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   .btn-transparent {

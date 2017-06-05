@@ -29,6 +29,17 @@ export class EventService {
       date: 'Sunday, 19th April',
       time: '9:00 pm',
       film: this.filmService.getFilms()[2]
+    },
+    {
+      id: 3,
+      eventOrganiser: this.userService.getFirstUser(),
+      location: 'Event Cinemas, Albany',
+      capacity: 20,
+      approved: true,
+      attendees: this.userService.getUsers(),
+      date: 'Sunday, 18th April',
+      time: '8:00 pm',
+      film: this.filmService.getYourName()
     }
   ]
 
@@ -36,6 +47,10 @@ export class EventService {
 
   public getEvents(): Event[] {
     return this.events;
+  }
+
+  public getEvent(id: number) : Event {
+    return this.events.find(e => e.id === id) as Event;
   }
 
   public addEvent(newEvent: Event) {

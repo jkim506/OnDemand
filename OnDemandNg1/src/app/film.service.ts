@@ -10,19 +10,19 @@ export class FilmService {
 
   public films = [
     {
-      title: 'Star Wars: Episode IV - A New Hope',
+      title: 'Star Wars: Episode IV',
       year: 1977,
       id: 2,
       image: '/assets/films/a_new_hope.jpg'
     },
     {
-      title: 'Star Wars: Episode V - The Empire Strikes Back',
+      title: 'Star Wars: Episode V',
       year: 1980,
       id: 3,
       image: '/assets/films/strikes_back.jpg'
     },
     {
-      title: 'Star Wars: Episode V - The Empire Strikes Back',
+      title: 'Star Wars: Episode VI',
       year: 1980,
       id: 4,
       image: '/assets/films/returnofthejedi.jpg'
@@ -34,7 +34,7 @@ export class FilmService {
       image: '/assets/films/mermaid.jpg'
     },
     {
-      title: 'Forrest Gump ',
+      title: 'Forrest Gump',
       year: 1994,
       id: 6,
       image: '/assets/films/forrestGump.jpg'

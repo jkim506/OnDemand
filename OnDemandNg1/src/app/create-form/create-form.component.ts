@@ -1,3 +1,4 @@
+import { FilmService } from './../film.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsersService } from '../users.service';
 
@@ -9,11 +10,13 @@ import { UsersService } from '../users.service';
 export class CreateFormComponent implements OnInit {
 
   // request details summary share
-  public activeFormSection = 2;
+  public activeFormSection = 1;
 
+  public films: string[] = [];
   public newEvent;
+  public selected: string;
 
-  constructor(private userService: UsersService) { }
+  constructor(private userService: UsersService, private filmService: FilmService) { }
 
   ngOnInit() {
     this.newEvent = {
@@ -29,6 +32,10 @@ export class CreateFormComponent implements OnInit {
       format: '2D',
       screenType: 'Regular'
     }
+
+    this.filmService.getFilmsFromMovieExchange().subscribe((data) => {
+      data.map( (film) => this.films.push(film.title));
+    } );
   }
 
   public setFormSection(section) {

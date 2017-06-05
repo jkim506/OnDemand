@@ -28,7 +28,7 @@ namespace Vista.OnDemand.Api.Controllers
                 var films = response.Content.ReadAsAsync<IEnumerable<Film>>().Result
                                   .GroupBy(p => p.Title)
                                   .Select(g => g.First())
-                                  .Take(20)
+                                  .Take(200)
                                   .ToList();
                 return films;
             }

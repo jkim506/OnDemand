@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Formatting;
@@ -17,7 +18,9 @@ namespace Vista.OnDemand.Api
 
             //json
             GlobalConfiguration.Configuration.Formatters.Clear();
-            GlobalConfiguration.Configuration.Formatters.Add(new JsonMediaTypeFormatter());
+            var jsonFormat = new JsonMediaTypeFormatter();
+            jsonFormat.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            GlobalConfiguration.Configuration.Formatters.Add(jsonFormat);
             // Web API routes
 
             config.MapHttpAttributeRoutes();

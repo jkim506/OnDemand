@@ -18,6 +18,7 @@
             <div class="row" style="height: 20px; margin-top: 18px;">
                 <div class="col-md-6" [ngClass]="{'scheduled': event.approved, 'not-scheduled': !event.approved}">
                     <div *ngIf="event.approved">
+                        <img src="assets/icons/check-pink.png" class="check-image"/>
                         Scheduled
                     </div>
                     <div *ngIf="!event.approved">

@@ -87,6 +87,24 @@ export class FilmService {
       year: '1995',
       id: 18,
       image: '/assets/films/ghostintheshell.jpg'
+    },
+    {
+      title: 'King Kong',
+      year: '1933',
+      id: 19,
+      image: '/assets/films/kingkong.jpg'
+    },
+    {
+      title: 'Them',
+      year: '1954',
+      id: 20,
+      image: '/assets/films/them.jpg'
+    },
+    {
+      title: 'The Lost World',
+      year: '1960',
+      id: 21,
+      image: '/assets/films/thelostworld.jpg'
     }
   ];
 
@@ -96,6 +114,10 @@ export class FilmService {
 
   public getFilms(): Film[] {
     return this.films;
+  }
+
+  public getFilm(id) {
+    return this.films.find(film => film.id === id);
   }
 
   public getSpiritedAway(): Film {

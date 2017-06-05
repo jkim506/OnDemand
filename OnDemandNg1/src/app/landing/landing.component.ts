@@ -8,9 +8,16 @@ import { EventService } from '../event.service';
 })
 export class LandingComponent implements OnInit {
 
+  public monsterEvents;
+  public events;
+
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
+
+    this.events = this.eventService.getEvents();
+
+    this.monsterEvents = this.eventService.getMonsterEvents();
   }
 
 }

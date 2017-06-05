@@ -8,10 +8,7 @@
 
 <div class="hero-event-cards">
   <div class="event-cards-container-vertical">
-    <app-event-card-vertical [event]="eventService.getEvents()[0]"></app-event-card-vertical>
-    <app-event-card-vertical [event]="eventService.getEvents()[0]"></app-event-card-vertical>
-    <app-event-card-vertical [event]="eventService.getEvents()[1]"></app-event-card-vertical>
-    <app-event-card-vertical [event]="eventService.getEvents()[1]"></app-event-card-vertical>
+    <app-event-card-vertical *ngFor="let event of monsterEvents" [event]="event"></app-event-card-vertical>
   </div>
 </div>
 
@@ -63,16 +60,10 @@
   </div>
   <div class="event-cards-container">
     <div class="event-cards-row">
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card *ngFor="let event of events.slice(0, 4)" [event]="event"></app-event-card>
     </div>
     <div class="event-cards-row">
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card *ngFor="let event of events.slice(4, 8)" [event]="event"></app-event-card>
     </div>
   </div>
 </div>

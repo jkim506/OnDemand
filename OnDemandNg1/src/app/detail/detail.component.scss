@@ -72,5 +72,48 @@ section {
             right: 0;
             bottom: 5px;
         }
+
+        .options{
+            margin-top: 30px;
+
+            .options-tab{
+                height: 38px;	
+                width: 64px;	
+                text-align: center;
+
+                .options-text{
+                    color: #000000;	
+                    font-family: Graphik;	
+                    font-size: 14px;	
+                    font-weight: 800;	
+                    line-height: 15px;
+                }
+
+                .people-saying-number{
+                    display: inline-block;
+                    opacity: 0.7;	
+                    height: 17px;	
+                    width: 30px;	
+                    border: 1px solid #E3E3E3;	
+                    border-radius: 100px;	
+                    background-color: #FFFFFF;
+                }             
+            }
+
+            .options-tab-selected{
+                border-bottom: 3px #2BD7A4 solid;
+            }
+        }
+
+        .overview{
+            margin-top: 45px;
+
+            .overview-text{
+                width: 100%;
+                color: #000000;	
+                font-family: Graphik;
+                font-size: 16px;
+            }
+        }
     }
 }

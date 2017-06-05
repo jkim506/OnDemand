@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsersService } from '../users.service';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-create-form',
@@ -9,18 +10,58 @@ import { UsersService } from '../users.service';
 export class CreateFormComponent implements OnInit {
 
   // request details summary share
-  public activeFormSection = 2;
+  public activeFormSection = 4;
 
   public newEvent;
 
-  constructor(private userService: UsersService) { }
+  public pretendSaving = false;
+
+  public displayDate;
+
+  public ticketTypes = [
+    {
+      type: 'Adult',
+      cinPrice: '$17.50',
+      customPrice: '$17.50',
+      selected: true
+    },
+    {
+      type: 'Child',
+      cinPrice: '$12.00',
+      customPrice: '$12.00',
+      selected: true
+    },
+    {
+      type: 'Senior',
+      cinPrice: '$12.00',
+      customPrice: '$12.00',
+      selected: false
+    },
+    {
+      type: 'Student',
+      cinPrice: '$14.00',
+      customPrice: '$14.00',
+      selected: false
+    },
+    {
+      type: 'Loyalty',
+      cinPrice: '$14.00',
+      customPrice: '$14.00',
+      selected: false
+    }
+  ];
+
+  constructor(private userService: UsersService, private eventService: EventService) { }
 
   ngOnInit() {
+    const today = new Date();
+    this.displayDate = `${today.getDate()}/${today.getMonth() + 1}`;
+
     this.newEvent = {
       id: 2,
       eventOrganiser: this.userService.activeUser,
       location: 'Berkeley Cinemas, Takapuna',
-      capacity: 254,
+      capacity: 320,
       approved: false,
       attendees: [],
       date: 'Sunday, 19th April',
@@ -32,6 +73,7 @@ export class CreateFormComponent implements OnInit {
   }
 
   public setFormSection(section) {
+    document.scrollingElement.scrollTop = 0;
     this.activeFormSection = section;
   }
 
@@ -41,6 +83,16 @@ export class CreateFormComponent implements OnInit {
 
   public onDescriptionBlur(event) {
     this.newEvent.description = event.target.value;
+  }
+
+  public createEvent() {
+    this.eventService.addEvent(this.newEvent);
+    this.pretendSaving = true;
+    setTimeout(() => {
+      this.pretendSaving = false;
+      this.setFormSection(4);
+    }, 600)
+
   }
 
 }

@@ -32,14 +32,25 @@
       </div>
       <div class="multi-select">
         <div [class.selected]="newEvent.format === '2D'" (click)="setProp('format', '2D')">2D</div>
-        <div [class.selected]="newEvent.screenType === '3D'" (click)="setProp('screenType', '3D')">3D</div>
+        <div [class.selected]="newEvent.format === '3D'" (click)="setProp('format', '3D')">3D</div>
       </div>
     </div>
     <div class="form-section" style="min-height: 410px;">
       <div class="section-number">3</div>
       <div class="section-title">Choose a Cinema you would like to host the screening</div>
       <div class="fake-input" style="width: 330px;">Cinemas near you
-        <img src="../assets/icons/caret-black.png">
+        <img style="width: 12px; height: 7px; top: 15px;" src="../assets/icons/caret-black.png">
+      </div>
+      <div style="width: 330px; margin-top: 30px;">
+        <div class="checkbox" [class.selected]="newEvent.location === 'Event Cinemas, Albany'" (click)="setProp('location', 'Event Cinemas, Albany')">
+          Event Cinemas, Albany
+        </div>
+        <div class="checkbox" [class.selected]="newEvent.location === 'Berkeley Cinemas, Takapuna'" (click)="setProp('location', 'Berkeley Cinemas, Takapuna')">
+          Berkeley Cinemas, Takapuna
+        </div>
+        <div class="checkbox" [class.selected]="newEvent.location === 'Hoyts Cinemas, Wairau Park'" (click)="setProp('location', 'Hoyts Cinemas, Wairau Park')">
+          Hoyts Cinemas, Wairau Park
+        </div>
       </div>
       <img class="fake-cinema-map" src="../assets/cinema.PNG">
     </div>
@@ -67,6 +78,18 @@
       <div class="section-title">Choose ticket prices
         <span class="sub-title">Choose which ticket types are available for sale. You can also specify a Custom Price above Cinema Price for additional profit</span>
       </div>
+      <div class="ticket-table">
+          <div class="table-header">
+            <span>Ticket Type</span>
+            <span style="float: right; width: 230px; text-align: right;">Custom Price</span>
+            <span style="float: right;">Cinema Price</span>
+          </div>
+          <div class="ticket-line" *ngFor="let ticket of ticketTypes" (click)="ticket.selected = !ticket.selected;">
+            <div class="checkbox" [class.selected]="ticket.selected">{{ticket.type}}</div>
+            <div class="fake-input">{{ticket.customPrice}}</div>
+            <div class="cin-price">{{ticket.cinPrice}}</div>
+          </div>
+      </div>
     </div>
     <div class="form-section">
       <div class="section-number">6</div>
@@ -77,4 +100,73 @@
     <a class="fake-input form-button pink-clear" (click)="setFormSection(1)">Back</a>
     <a class="fake-input form-button pink" (click)="setFormSection(3)">Continue</a>
   </ng-container>
+
+  <ng-container *ngIf="activeFormSection === 3">
+    <div class="summary">
+      <h2>Your event summary</h2>
+      <div>// nice card mustafa is making</div>
+      <div class="details">
+        <p class="details-title">Details</p>
+        <div class="organiser">
+          <img src="{{newEvent.eventOrganiser.image}}">
+          Organised by <b>{{newEvent.eventOrganiser.name}}</b>
+        </div>
+        <div class="time-location">
+          <img src="../../assets/cinema-small.PNG">
+          <div class="time-details">
+            <span><b>{{newEvent.time}}</b></span>
+            <span>{{newEvent.date}}</span>
+            <span>{{newEvent.location}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overview">
+      <h2>Overview</h2>
+      <p>{{newEvent.description}}</p>
+    </div>
+
+    <a class="fake-input form-button pink-clear" (click)="setFormSection(2)">Back</a>
+    <a class="fake-input form-button pink" (click)="createEvent()" [class.pretend-saving]="pretendSaving"><span>Create Event</span></a>
+  </ng-container>
+
+  <ng-container *ngIf="activeFormSection === 4">
+    <div class="share-header">
+      <h1>Your Event has been created!</h1>
+      <a class="fake-input form-button green-clear" href="">Manage Event</a>
+    </div>
+
+    <div class="seats">
+      <div class="max"></div>
+      <div class="goal"></div>
+
+      <div class="seat-marker created">
+        <span class="num">{{displayDate}}</span>
+        <span class="label">Event Created</span>
+      </div>
+      <div class="seat-marker seat-goal">
+        <span class="num">200</span>
+        <span class="label">Seats till goal</span>
+      </div>
+      <div class="seat-marker seat-max">
+        <span class="num">{{newEvent.capacity}}</span>
+        <span class="label">Maximum Seats</span>
+      </div>
+    </div>
+  </ng-container>
+</div>
+
+<div class="share" *ngIf="activeFormSection === 4">
+  <h3>Get people interested to help reach your goal</h3>
+  <div class="share-bg">
+    <div class="share-buttons">
+      <a class="fake-input social-button facebook" href="">Facebook</a>
+      <a class="fake-input social-button twitter" href="">Twitter</a>
+      <div class="share-url">
+        <span>Event URL</span>
+        <div class="fake-input">http://ondemand.com/X862M0</div>
+        <a href="" class="fake-input copy-button">Copy</a>
+      </div>
+    </div>
+  </div>
 </div>

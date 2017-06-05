@@ -4,7 +4,6 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-
 //Easily the best data service in the world
 @Injectable()
 export class FilmService {
@@ -109,7 +108,7 @@ export class FilmService {
   public getFilmsFromMovieExchange(): Observable<Film[]> {
     return this.http.get('http://localhost:61583/api/film')
                     .map(this.extractData)
-                    .catch(this.handleError);         
+                    .catch(this.handleError);
   }
 
   private extractData(res: Response) {

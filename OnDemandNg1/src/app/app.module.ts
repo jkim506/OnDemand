@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { AlertModule, TypeaheadModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { DetailComponent } from './detail/detail.component';
 import { CreateFormComponent } from './create-form/create-form.component';
+import { FormsModule } from '@angular/forms';
 
 import { EventService } from './event.service';
 import { UsersService } from './users.service';
@@ -49,7 +50,9 @@ const ROUTES: Routes = [
     HttpModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    TypeaheadModule.forRoot(),
+    FormsModule
   ],
   providers: [ EventService, FilmService, UsersService ],
   bootstrap: [AppComponent]

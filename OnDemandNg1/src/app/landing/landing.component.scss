@@ -47,7 +47,10 @@
 
   .hero-catalog {
     height: 400px;
-    background: url('../../assets/catalog-hero.png');
+    width: 95%;
+    border-radius: 1em;
+    margin: 0 auto;
+    background: url('../../assets/catalog-hero.png') no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -75,6 +78,7 @@
             display: flex;
             justify-content: flex-end;
             .step-number {
+              font-weight: lighter;
               @include colored-circle(white, cyan, 80px, 50px);
             }
           }

@@ -148,9 +148,11 @@
 
   .hero-nippo {
     border-top: 1px solid #DCDEDD;
-    height: 500px;
-    background: url('../../assets/nippo-hero.png');
-    background-size: cover;
+    background-color: #F6F6F6;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   .btn-transparent {

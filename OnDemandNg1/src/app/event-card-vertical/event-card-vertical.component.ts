@@ -10,9 +10,9 @@ import { Router } from "@angular/router";
 export class EventCardVerticalComponent implements OnInit {
 
   @Input() event: Event;
+  private percentage: number;
 
   constructor(private router: Router) { 
-
   }
 
   goToEventDetails(){
@@ -20,6 +20,6 @@ export class EventCardVerticalComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.percentage = Math.round((this.event.attendees.length / this.event.capacity) * 100);
   }
-
 }

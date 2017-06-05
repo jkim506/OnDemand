@@ -16,21 +16,21 @@
                 </div>
             </div>
             <div class="row" style="height: 20px; margin-top: 18px;">
-                <div class="col-md-5 scheduled">
-                    Scheduled
+                <div class="col-md-6" [ngClass]="{'scheduled': event.approved, 'not-scheduled': !event.approved}">
+                    <div *ngIf="event.approved">
+                        Scheduled
+                    </div>
+                    <div *ngIf="!event.approved">
+                        Pending
+                    </div>
                 </div>
-                <div class="col-md-7 seats-left">
+                <div class="col-md-6 seats-left">
                     {{event.capacity - event.attendees.length}} seats left
                 </div>
             </div>
             <div class="row">
-                <div class="bar">
-                </div>
-            </div>
-            <div class="row organizer">
-                <img src="{{event.eventOrganiser.image}}" class="organizer-image"/>
-                <div class="organizer-text">
-                    Organised by {{event.eventOrganiser.name}}
+                <div class="bar" [ngStyle]="{ 'background-image': 'linear-gradient(left, #CE4AC6, #CE4AC6 ' + percentage + '%, transparent ' + percentage + '%, transparent 100%)', 
+                                              'background-image': '-webkit-linear-gradient(left, #CE4AC6, #CE4AC6 ' + percentage + '%, transparent ' + percentage + '%, transparent 100%)'}">
                 </div>
             </div>
             <div class="row">

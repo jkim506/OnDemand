@@ -1,6 +1,6 @@
 .event-card{
   box-sizing: border-box;	
-  height: 526px;	
+  height: 466px;	
   width: 215px;
   border: 1px solid #E3E3E3;	
   border-radius: 4px;	
@@ -62,7 +62,13 @@
 }
 
 .not-scheduled{
-
+  height: 11px;	
+  width: 57px;	
+  color: grey;	
+  font-family: Graphik;	
+  font-size: 11px;	
+  font-weight: 500;
+  line-height: 12px;
 }
 
 .seats-left{
@@ -87,6 +93,7 @@
 }
 
 .organizer-image{
+  border-radius: 50%;
   box-sizing: border-box;	
   height: 44px;	
   width: 44px;	

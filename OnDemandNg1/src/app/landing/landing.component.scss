@@ -12,8 +12,24 @@
   line-height: $fontSize;
 }
 
+@mixin fade-in($duration) {
+  animation: animationFrames $duration ease;
+}
+
+@keyframes animationFrames{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
 
 :host {
+  .fade-in {
+    @include fade-in(2s);
+  }
+
   .hero-monster {
     height: 500px;
     background: url('../../assets/monster-hero.jpg');

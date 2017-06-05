@@ -11,10 +11,12 @@ import { Router } from "@angular/router";
 export class ReserveTicketsCardComponent implements OnInit {
 
   @Input() event: Event;
+  private percentage: number;
 
   constructor() { }
 
   ngOnInit() {
+    this.percentage = Math.round((this.event.attendees.length / this.event.capacity) * 100);
   }
 
 }

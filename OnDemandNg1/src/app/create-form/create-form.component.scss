@@ -1,261 +1,339 @@
-
-$pink: rgba(206,74,198,1);
+$pink: rgba(206, 74, 198, 1);
 $dark-pink: darken($pink, 20%);
 $green: #48D5A3;
 $prog-h: 40px;
 $num-size: 34px;
 $input-height: 46px;
-$border-color: rgba(0,0,0,0.2);
-
+$border-color: rgba(0, 0, 0, 0.2);
 .form-container {
-  margin: 100px auto;
-  width: 1000px;
+    margin: 100px auto;
+    width: 1000px;
 }
 
 .form-header {
-  margin-bottom: 50px;
-  h2 {
-    font-family: sf;
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
+    margin-bottom: 50px;
+    h2 {
+        font-family: sf;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 .progress-tracker {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  height: $prog-h;
-  background-color: white;
-  border: 1px solid rgba(0,0,0,0.3);
-  overflow: hidden;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: $prog-h;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
+
 .progress-state {
-  flex: 1 1 auto;
-  line-height: $prog-h;
-  position: relative;
-  padding-left: 50px;
-  font-size: 14px;
-  font-weight: normal;
+    flex: 1 1 auto;
+    line-height: $prog-h;
+    position: relative;
+    padding-left: 50px;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 .progress-state:first-child {
-  width: 225px;
-  flex-grow: 0;
-  padding-left: 30px;
+    width: 225px;
+    flex-grow: 0;
+    padding-left: 30px;
 }
 
 .progress-state:after {
-  content: '';
-  height: 29px;
-  width: 29px;
-  transform: rotate(45deg);
-  box-shadow: 1px -1px 0 0 rgba(0,0,0,0.3);
-  position: absolute;
-  top: 5px;
-  right: -13px;
-  display: block;
-  z-index: 1;
+    content: '';
+    height: 29px;
+    width: 29px;
+    transform: rotate(45deg);
+    box-shadow: 1px -1px 0 0 rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 5px;
+    right: -13px;
+    display: block;
+    z-index: 1;
 }
 
 .progress-state.active {
-  background-color: $pink;
-  color: white;
-  &:after {
     background-color: $pink;
-    box-shadow: 1px -1px 0 0 rgba(255,255,255,0.2);
-  }
+    color: white;
+    &:after {
+        background-color: $pink;
+        box-shadow: 1px -1px 0 0 rgba(255, 255, 255, 0.2);
+    }
 }
+
 .progress-state.complete {
-  background-color: $dark-pink;
-  color: white;
-  &:after {
     background-color: $dark-pink;
-    box-shadow: 1px -1px 0 0 rgba(255,255,255,0.2);
-  }
+    color: white;
+    &:after {
+        background-color: $dark-pink;
+        box-shadow: 1px -1px 0 0 rgba(255, 255, 255, 0.2);
+    }
 }
 
 .progress-state:last-child {
-  &:after {
-    display: none;
-  }
+    &:after {
+        display: none;
+    }
 }
 
 .form-section {
-  margin-bottom: 50px;
-  position: relative;
+    margin-bottom: 50px;
+    position: relative;
 }
-
 
 .section-number {
-  display: block;
-  position: absolute;
-  left: -50px;
-  height: $num-size;
-  width: $num-size;
-  color: white;
-  font-size: 14px;
-  line-height: $num-size;
-  text-align: center;
-  background-color: $green;
-  border-radius: 50%;
-  font-weight: bold;
+    display: block;
+    position: absolute;
+    left: -50px;
+    height: $num-size;
+    width: $num-size;
+    color: white;
+    font-size: 14px;
+    line-height: $num-size;
+    text-align: center;
+    background-color: $green;
+    border-radius: 50%;
+    font-weight: bold;
 }
+
 .section-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  line-height: $num-size;
-  margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    line-height: $num-size;
+    margin-bottom: 20px;
 }
 
 .fake-input {
-  height: $input-height;
-  border: 1px solid rgba(0,0,0,0.2);
-  border-radius: 6px;
-  background-color: white;
-  padding: 0 15px;
-  color: black;
-  line-height: $input-height;
-  position: relative;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-
-  img {
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    right: 20px;
-    bottom: 13px;
-    opacity: 0.4;
-  }
+    height: $input-height;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background-color: white;
+    padding: 0 15px;
+    color: black;
+    line-height: $input-height;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    img {
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        right: 20px;
+        bottom: 13px;
+        opacity: 0.4;
+    }
 }
 
 .multi-select {
-  display: inline-block;
-  margin-right: 30px;
-  height: $input-height;
-  line-height: 0;
-  font-size: 0;
-  > div {
     display: inline-block;
-    line-height: $input-height;
-    color: black;
-    background-color: white;
-    padding: 0 15px;
-    font-size: 14px;
-    font-weight: bold;
-
-    border: 1px solid $border-color;
-    border-right-width: 0px;
-
-    &:first-child {
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
+    margin-right: 30px;
+    height: $input-height;
+    line-height: 0;
+    font-size: 0;
+    >div {
+        display: inline-block;
+        line-height: $input-height;
+        color: black;
+        background-color: white;
+        padding: 0 15px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid $border-color;
+        border-right-width: 0px;
+        &:first-child {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+        &:last-child {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-right-width: 1px;
+        }
+        &.selected {
+            background-color: $green;
+            color: white;
+            border-color: darken($green, 10%);
+        }
     }
-
-    &:last-child {
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
-      border-right-width: 1px;
-    }
-
-    &.selected {
-      background-color: $green;
-      color: white;
-      border-color: darken($green, 10%);
-    }
-  }
 }
+
 .fake-cinema-map {
-  border-radius: 6px;
-  border: 1px solid $border-color;
-  width: 540px;
-  height: auto;
-  position: absolute;
-  left: 360px;
-  top: 53px;
+    border-radius: 6px;
+    border: 1px solid $border-color;
+    width: 540px;
+    height: auto;
+    position: absolute;
+    left: 360px;
+    top: 53px;
 }
 
 .fake-input.form-button.pink {
-  border-color: lighten($pink, 10%);
-  background-color: $pink;
-  color: white;
-  padding: 0 30px;
+    border-color: lighten($pink, 10%);
+    background-color: $pink;
+    color: white;
+    padding: 0 30px;
 }
+
 .fake-input.form-button.pink-clear {
-  border-color: transparent;
-  background-color: transparent;
-  color: $pink;
-  padding: 0 30px;
-  margin-right: 30px;
+    border-color: transparent;
+    background-color: transparent;
+    color: $pink;
+    padding: 0 30px;
+    margin-right: 30px;
 }
 
 .fake-input.event-description {
-  height: 350px;
-  width: 1000px;
-  font-weight: normal;
-  &:focus {
-    outline: none;
-  }
+    height: 350px;
+    width: 1000px;
+    font-weight: normal;
+    &:focus {
+        outline: none;
+    }
 }
 
 .sub-title {
-  display: block;
-  font-size: 10px;
-  font-weight: 200;
-  width: 100%;
-  line-height: 16px;
+    display: block;
+    font-size: 10px;
+    font-weight: 200;
+    width: 100%;
+    line-height: 16px;
+}
+
+.selected-film-card {
+    margin-top: 34px;
+    border: 1px solid #E3E3E3;
+    height: 235px;
+    width: 600px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    display: flex;
+    .selected-film-info {
+      flex-grow: 1;
+        .selected-top {
+          display: flex;
+          margin-top: 24px;        
+          padding-left: 23px;
+              
+            .film-details {
+              align-self: flex-start;
+              width: 100%;
+              
+                .film-title {
+                    color: #000000;
+                    font-size: 14px;
+                    line-height: 15px;
+                    font-family: Graphik;
+                    font-weight:  600;
+                }
+                .film-year {
+                  	opacity: 0.7;
+                    color: #000000;
+                    font-family: Graphik;
+                    font-size: 11px;
+                    line-height: 12px;
+                }
+            }
+            .pg {
+              align-self: flex-end;
+              border: 1px solid #DFDFDF;
+              border-radius: 3px;
+              background-color: #FFFFFF;
+              text-align: center;
+              font-size: 12px;
+              line-height: 13px;
+              font-weight: 600;
+              margin-right: 23px;
+              padding: 7px;
+              height: 27px;
+            }
+        }
+        .run-time {
+          padding-top: 24px;
+        }
+        .run-time,
+        .director,
+        .cast {
+          color: #000000;
+          font-family: Graphik;
+          font-size: 12px;
+          line-height: 20px;
+          display: flex;
+          padding-top: 16px;
+          padding-left: 23px;
+
+          label {
+            padding-right: 69px;
+            width: 123px !important;
+            display: block;
+          }
+          div {
+            padding-right: 17px;
+            width: 274px;
+          }
+        }
+    }
+    .selected-film-image {
+        background: url('../../assets/your-name.png');
+        background-size: 170px 235px;;
+        height: 235px;
+        width: 270px;
+        background-repeat: no-repeat;
+    }
 }
 
 .film-select {
- /deep/ .open {
-    .dropdown-menu {
-    display: block;
+    /deep/ .open {
+        .dropdown-menu {
+            display: block;
+        }
     }
-  }
-/deep/ .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 4px;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    li {
-      a {
-        display: block;
-        padding: 3px 20px;
-        clear: both;
-        font-weight: 400;
-        line-height: 1.42857143;
-        color: #333;
-        white-space: nowrap;
-      }
+    /deep/ .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        li {
+            a {
+                display: block;
+                padding: 3px 20px;
+                clear: both;
+                font-weight: 400;
+                line-height: 1.42857143;
+                color: #333;
+                white-space: nowrap;
+            }
+        }
+        .active {
+            a {
+                color: #fff;
+                text-decoration: none;
+                background-color: #337ab7;
+                outline: 0;
+            }
+        }
     }
-
-    .active {
-      a {
-          color: #fff;
-    text-decoration: none;
-    background-color: #337ab7;
-    outline: 0;
-      }
-    }
-}
 }

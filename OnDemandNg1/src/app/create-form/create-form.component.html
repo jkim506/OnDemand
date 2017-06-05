@@ -22,10 +22,37 @@
       <div class="section-number">1</div>
       <div class="section-title">Choose the film you would like to request</div>
       <div class="film-select">
-      <input [(ngModel)]="selected"
-       [typeahead]="films"
-       class="form-control">
-       </div>
+        <input 
+          [(ngModel)]="selected"
+          (typeaheadOnSelect)="filmSelected()"
+          [typeahead]="films"
+          class="form-control">
+      </div>
+      <div *ngIf="showFilmCard" class="selected-film-card">
+        <div class="selected-film-image"></div>
+        <div class="selected-film-info">
+          <div class="selected-top">
+            <div class="film-details">
+              <div class="film-title">Your Name</div>
+              <div class="film-year">2016</div>
+            </div>
+            <div class="pg">PG</div>
+          </div>
+          <div class="run-time">
+            <label>Run time:</label>
+            <div>2hr 14min</div>
+          </div>
+          <div class="director">
+            <label>Director:</label>
+            <div>Makoto Shinkai</div>
+          </div>
+          <div class="cast">
+            <label>Cast:</label>
+            <div>Ryunosuke Kamiki, Mone Kamishiraishi, Masami Nagasawa, Etsuko Ichihara, Ryo Narita</div>
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="form-section">
       <div class="section-number">2</div>

@@ -15,6 +15,7 @@ export class CreateFormComponent implements OnInit {
   public films: string[] = ['Your Name'];
   public newEvent;
   public selected: string;
+  public showFilmCard = false;
 
   constructor(private userService: UsersService, private filmService: FilmService) { }
 
@@ -48,6 +49,10 @@ export class CreateFormComponent implements OnInit {
 
   public onDescriptionBlur(event) {
     this.newEvent.description = event.target.value;
+  }
+
+  public filmSelected() {
+    this.showFilmCard = true;
   }
 
 }

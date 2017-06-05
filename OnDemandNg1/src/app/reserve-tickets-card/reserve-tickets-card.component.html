@@ -11,11 +11,17 @@
                     Organised by {{event.eventOrganiser.name}}
                 </div>
             </div>
-            <div class="row" style="height: 20px; margin-top: 18px;">
-                <div class="col-md-5 scheduled">
-                    Scheduled
+            <div class="row scheduling-details">
+                <div class="col-md-6" [ngClass]="{'scheduled': event.approved, 'not-scheduled': !event.approved}">
+                    <div *ngIf="event.approved">
+                        <img src="assets/icons/check-pink.png" class="check-image"/>
+                        Scheduled
+                    </div>
+                    <div *ngIf="!event.approved">
+                        Pending
+                    </div>
                 </div>
-                <div class="col-md-7 seats-left">
+                <div class="col-md-6 seats-left">
                     {{event.capacity - event.attendees.length}} seats left
                 </div>
             </div>
@@ -25,7 +31,7 @@
             </div>
             <div class="row top-margin-20">
                 <div class="col-md-4 map">
-                  <img src="../assets/map.PNG" class="map-image">
+                  <img src="/assets/map.PNG" class="map-image">
                 </div>
                 <div class="col-md-8">
                   <div class="event-details">

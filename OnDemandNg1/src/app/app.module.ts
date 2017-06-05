@@ -14,6 +14,7 @@ import { FilmService } from './film.service';
 import { EventCardComponent } from './event-card/event-card.component';
 import { HttpModule } from '@angular/http';
 import { EventCardVerticalComponent } from './event-card-vertical/event-card-vertical.component';
+import { ReserveTicketsCardComponent } from './reserve-tickets-card/reserve-tickets-card.component';
 
 const ROUTES: Routes = [
   {
@@ -42,7 +43,8 @@ const ROUTES: Routes = [
     DetailComponent,
     CreateFormComponent,
     EventCardComponent,
-    EventCardVerticalComponent
+    EventCardVerticalComponent,
+    ReserveTicketsCardComponent
   ],
   imports: [
     BrowserModule,

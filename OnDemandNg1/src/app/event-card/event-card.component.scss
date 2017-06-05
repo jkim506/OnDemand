@@ -52,10 +52,18 @@
   font-size: 11px;	
   font-weight: 500;
   line-height: 12px;
+  padding-left: 0;
 }
 
 .not-scheduled{
-
+  height: 11px;	
+  width: 57px;	
+  color: grey;	
+  font-family: Graphik;	
+  font-size: 11px;	
+  font-weight: 500;
+  line-height: 12px;
+  padding-left: 0;
 }
 
 .seats-left{
@@ -81,6 +89,7 @@
 }
 
 .organizer-image{
+  border-radius: 50%;
   box-sizing: border-box;	
   height: 44px;	
   width: 44px;	
@@ -118,4 +127,9 @@
   font-size: 11px;
   font-weight: 300;	
   line-height: 12px;	
+}
+
+.check-image{
+  height: 10px;	
+  width: 10px;
 }

@@ -12,7 +12,7 @@ export class CreateFormComponent implements OnInit {
   // request details summary share
   public activeFormSection = 1;
 
-  public films: string[] = [];
+  public films: string[] = ['Your Name'];
   public newEvent;
   public selected: string;
 

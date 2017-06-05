@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { DetailComponent } from './detail/detail.component';
 import { CreateFormComponent } from './create-form/create-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { EventService } from './event.service';
 import { UsersService } from './users.service';
@@ -54,7 +54,8 @@ const ROUTES: Routes = [
     RouterModule.forRoot(ROUTES),
     AlertModule.forRoot(),
     TypeaheadModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ EventService, FilmService, UsersService ],
   bootstrap: [AppComponent]

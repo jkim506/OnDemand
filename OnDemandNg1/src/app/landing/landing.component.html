@@ -60,8 +60,18 @@
     </div>
   </div>
   <div class="event-cards-container">
-    <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-    <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+    <div class="event-cards-row">
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+    </div>
+    <div class="event-cards-row">
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+    </div>
   </div>
 </div>
 

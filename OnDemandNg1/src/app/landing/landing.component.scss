@@ -102,12 +102,13 @@
       flex-direction: row;
       justify-content: space-between;
       font-size: 1em;
-
+      font-weight: bold;
       .fake-tabs {
         display: flex;
         flex-direction: row;
         div {
-          padding: 0 20px;
+          padding: 0 10px;
+          margin: 0 10px;
           text-align: center;
           &:hover {
             cursor: pointer;

@@ -9,6 +9,8 @@
 <div class="hero-event-cards">
   <div class="event-cards-container-vertical">
     <app-event-card-vertical [event]="eventService.getEvents()[0]"></app-event-card-vertical>
+    <app-event-card-vertical [event]="eventService.getEvents()[0]"></app-event-card-vertical>
+    <app-event-card-vertical [event]="eventService.getEvents()[1]"></app-event-card-vertical>
     <app-event-card-vertical [event]="eventService.getEvents()[1]"></app-event-card-vertical>
   </div>
 </div>
@@ -27,13 +29,13 @@
           <div class="step-number-container">
             <div class="step-number">2</div>
           </div>
-          <h3>Your choice of film from new releases or our catalogue</h3>
+          <h3>Choose when and where you want your film to play</h3>
         </div>
         <div class="step">
           <div class="step-number-container">
             <div class="step-number">3</div>
           </div>
-          <h3>Your choice of film from new releases or our catalogue</h3>
+          <h3>Get enough people interested and we'll play it on the big screen</h3>
         </div>
       </div>
     <button class="btn-transparent">Request a Film</button>
@@ -44,8 +46,8 @@
   <h1>Explore OnDemand films on now</h1>
   <div class="row-horizontal">
     <div class="fake-tabs">
-      <div class="active">Fake Tab</div>
-      <div>Fake Tab</div>
+      <div class="active">Scheduled Sessions</div>
+      <div>Newly Created</div>
     </div>
     <div class="fake-buttons">
       <div class="fake-button">
@@ -60,9 +62,19 @@
     </div>
   </div>
   <div class="event-cards-container">
-    <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-    <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+    <div class="event-cards-row">
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+    </div>
+    <div class="event-cards-row">
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+    </div>
   </div>
 </div>
 
-<div class="hero-nippo"></div>
+<div class="hero-nippo"><img src="../../assets/nippo-hero.png"></div>

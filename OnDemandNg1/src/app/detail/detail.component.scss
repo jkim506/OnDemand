@@ -8,6 +8,7 @@
 section {
     height: 1444px;
     width: 100%;
+    color: white;
 
     .film-picture {
         top: 269px;
@@ -26,14 +27,93 @@ section {
             opacity: 0.9;
             background-color: #ffffff;
             text-align: center;
-            span {
-                padding-top: 13px;
+            p {
+                margin-top: 8px;
                 font-family: Graphik;
                 font-size: 14px;
                 font-weight: 500;
                 color: #000000;
             }
 
+        }
+    }
+
+    .main-content{
+        margin-top: 30px;
+        padding-left: 82px;
+        padding-right: 82px;
+
+
+        .title{
+            color: #000000;	
+            font-size: 30px;	
+            font-weight: 900;	
+            line-height: 36px;
+            text-align: right;
+        }
+
+        .year{
+            opacity: 0.7;	
+            color: #000000;	
+            font-family: Graphik;	
+            font-size: 20px;	
+            line-height: 22px;
+            position: absolute;
+            bottom: 5px;
+        }
+        
+        .director{
+            opacity: 0.7;	
+            color: #000000;	
+            font-family: Graphik;	
+            font-size: 20px;	
+            line-height: 22px;
+            position: absolute;
+            right: 0;
+            bottom: 5px;
+        }
+
+        .options{
+            margin-top: 30px;
+
+            .options-tab{
+                height: 38px;	
+                width: 64px;	
+                text-align: center;
+
+                .options-text{
+                    color: #000000;	
+                    font-family: Graphik;	
+                    font-size: 14px;	
+                    font-weight: 800;	
+                    line-height: 15px;
+                }
+
+                .people-saying-number{
+                    display: inline-block;
+                    opacity: 0.7;	
+                    height: 17px;	
+                    width: 30px;	
+                    border: 1px solid #E3E3E3;	
+                    border-radius: 100px;	
+                    background-color: #FFFFFF;
+                }             
+            }
+
+            .options-tab-selected{
+                border-bottom: 3px #2BD7A4 solid;
+            }
+        }
+
+        .overview{
+            margin-top: 45px;
+
+            .overview-text{
+                width: 100%;
+                color: #000000;	
+                font-family: Graphik;
+                font-size: 16px;
+            }
         }
     }
 }

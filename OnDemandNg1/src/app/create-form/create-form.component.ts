@@ -1,6 +1,8 @@
+
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsersService } from '../users.service';
 import { EventService } from '../event.service';
+import { FilmService } from './../film.service';
 
 @Component({
   selector: 'app-create-form',
@@ -10,9 +12,11 @@ import { EventService } from '../event.service';
 export class CreateFormComponent implements OnInit {
 
   // request details summary share
-  public activeFormSection = 4;
+  public activeFormSection = 1;
 
+  public films: string[] = ['Your Name'];
   public newEvent;
+  public selected: string;
 
   public pretendSaving = false;
 
@@ -51,7 +55,7 @@ export class CreateFormComponent implements OnInit {
     }
   ];
 
-  constructor(private userService: UsersService, private eventService: EventService) { }
+  constructor(private userService: UsersService, private eventService: EventService, private filmService: FilmService) { }
 
   ngOnInit() {
     const today = new Date();
@@ -70,6 +74,10 @@ export class CreateFormComponent implements OnInit {
       format: '2D',
       screenType: 'Regular'
     }
+
+    this.filmService.getFilmsFromMovieExchange().subscribe((data) => {
+      data.map( (film) => this.films.push(film.title));
+    } );
   }
 
   public setFormSection(section) {

@@ -4,26 +4,26 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-
+import 'rxjs/add/observable/throw';
 //Easily the best data service in the world
 @Injectable()
 export class FilmService {
 
   public films = [
     {
-      title: 'Star Wars: Episode IV - A New Hope',
+      title: 'Star Wars: Episode IV',
       year: 1977,
       id: 2,
       image: '/assets/films/a_new_hope.jpg'
     },
     {
-      title: 'Star Wars: Episode V - The Empire Strikes Back',
+      title: 'Star Wars: Episode V',
       year: 1980,
       id: 3,
       image: '/assets/films/strikes_back.jpg'
     },
     {
-      title: 'Star Wars: Episode V - The Empire Strikes Back',
+      title: 'Star Wars: Episode VI',
       year: 1980,
       id: 4,
       image: '/assets/films/returnofthejedi.jpg'
@@ -35,7 +35,7 @@ export class FilmService {
       image: '/assets/films/mermaid.jpg'
     },
     {
-      title: 'Forrest Gump ',
+      title: 'Forrest Gump',
       year: 1994,
       id: 6,
       image: '/assets/films/forrestGump.jpg'
@@ -109,7 +109,7 @@ export class FilmService {
   public getFilmsFromMovieExchange(): Observable<Film[]> {
     return this.http.get('http://localhost:61583/api/film')
                     .map(this.extractData)
-                    .catch(this.handleError);         
+                    .catch(this.handleError);
   }
 
   private extractData(res: Response) {

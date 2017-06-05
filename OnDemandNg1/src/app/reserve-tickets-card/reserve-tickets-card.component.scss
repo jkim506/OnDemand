@@ -1,0 +1,170 @@
+.event-card{
+  box-sizing: border-box;	
+  margin-left: 50px;
+  height: 308px;	
+  width: 285px;
+  border: 1px solid #E3E3E3;	
+  border-radius: 4px;	
+  background-color: #FFFFFF;
+
+  .details-container{
+    padding-left: 17px;
+    padding-right: 17px;
+
+    .title{
+      margin-top: 21px;
+      height: 14px;	
+      color: #000000;	
+      font-family: Graphik;	
+      font-size: 14px;	
+      font-weight: 500;	
+      line-height: 15px; 
+      width: 190px;   
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      .title-text{
+        display: block;
+      }
+    }
+
+    .organizer{
+      margin-top: 20px;
+
+      .organizer-image{
+        border-radius: 50%;
+        box-sizing: border-box;	
+        height: 44px;	
+        width: 44px;	
+        border: 4px solid #FFFFFF;
+      }  
+      
+      .organizer-text{
+        height: 20px;	
+        margin-left: 10px;
+        margin-top: 10px;
+        color: #000000;	
+        font-family: Graphik;	
+        font-size: 12px;	
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+
+    .scheduling-details{
+      height: 20px; 
+      margin-top: 18px;
+      
+      .scheduled{
+        height: 11px;	
+        width: 57px;	
+        color: #CE4AC6;	
+        font-family: Graphik;	
+        font-size: 11px;	
+        font-weight: 500;
+        line-height: 12px;
+        padding-left: 0;
+      }
+
+      .not-scheduled{
+        height: 11px;	
+        width: 57px;	
+        color: grey;	
+        font-family: Graphik;	
+        font-size: 11px;	
+        font-weight: 500;
+        line-height: 12px;
+        padding-left: 0;
+      }
+
+      .seats-left{
+        height: 11px;	
+        color: #000000;	
+        font-family: Graphik;	
+        font-size: 11px;	
+        font-weight: 500;	
+        line-height: 12px;
+        padding-right: 0px;	
+        text-align: right;
+      }
+
+      .check-image{
+        height: 10px;	
+        width: 10px;
+      }
+    }
+
+    .bar {
+      height: 4px;	
+      width: 250px;	
+      background-color: #E7E7E7;
+    }
+
+    .map{
+      padding: 0;
+
+      .map-image{
+        height: 83px;
+        width: 83px;
+      }
+    }
+
+    .reserve-tickets{
+      margin-top: 22px;
+      border-radius: 0 0 4px 4px;	
+      background-color: #CE4AC6;
+      width: 283px;
+      height: 41px;
+      padding-left: 0;
+      margin-left: -32px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p{
+        margin-top: 14px;
+        height: 14px;	
+        width: 105px;	
+        color: #FFFFFF;	
+        font-family: Graphik;	
+        font-size: 14px;	
+        font-weight: 500;	
+        line-height: 15px;
+      }
+    }
+
+    .event-details{
+      margin-top: 15px;
+      margin-left: 10px;
+
+      .time{
+        height: 11px;	
+        color: #000000;	
+        font-family: Graphik;	
+        font-size: 13px;
+        font-weight: 500;	
+        line-height: 12px;	
+      }
+      
+      .date-location{
+        margin-top:8px;
+        height: 11px;	
+        color: #000000;	
+        font-family: Graphik;	
+        font-size: 11px;
+        font-weight: 300;	
+        line-height: 12px;	
+      }
+    } 
+  }
+}
+
+.top-margin-20{
+  margin-top: 20px;
+}
+
+.top-margin-10{
+  margin-top: 10px;
+}

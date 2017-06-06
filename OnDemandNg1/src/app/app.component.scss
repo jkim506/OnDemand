@@ -1,3 +1,7 @@
+$pink: rgba(206,74,198,1);
+$dark-pink: darken($pink, 20%);
+$green: #48D5A3;
+
 .ond-header {
   position: fixed;
   top: 0;
@@ -17,6 +21,12 @@
   font-weight: 500;
   font-size: 14px;
   margin-left: 35px;
+  border-bottom: 0px solid $green;
+  transition: all 0.3s ease;
+
+  &.router-link-active {
+    border-width: 3px;
+  }
 }
 .ond-header-option span {
   vertical-align: middle;

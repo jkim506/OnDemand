@@ -12,11 +12,11 @@ export class EventCardComponent implements OnInit {
   @Input() event: Event;
   private percentage: number;
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
 
   }
 
-  goToEventDetails(){
+  goToEventDetails () {
      this.router.navigate(['/event/your-name']);
   }
 

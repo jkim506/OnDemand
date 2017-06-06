@@ -105,6 +105,18 @@ export class FilmService {
       year: '1960',
       id: 21,
       image: '/assets/films/thelostworld.jpg'
+    },
+    {
+      title: 'Toy Story',
+      year: '1995',
+      id: 22,
+      image: '/assets/films/toy_story.jpg'
+    },
+    {
+      title: 'Monsters, Inc.',
+      year: '2001',
+      id: 23,
+      image: '/assets/films/monsters_inc.jpg'
     }
   ];
 

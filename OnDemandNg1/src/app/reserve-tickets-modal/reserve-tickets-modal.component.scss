@@ -7,7 +7,6 @@ $green: #48D5A3;
     height: 549px;
     width: 519px;
     margin-top: 140px;
-    border: 1px solid black;
 
     .custom-modal-header{
         margin-top: 10px;
@@ -28,6 +27,7 @@ $green: #48D5A3;
             height: 15px;
             position: absolute;
             right: 0;
+            cursor: pointer;
         }
 
         .tickets-question{
@@ -161,6 +161,7 @@ $green: #48D5A3;
         height: 61px;
         border-radius: 4px;
         background-color: #ce4ac6;
+        cursor: pointer;
 
         .reserve-text{
             color: white;

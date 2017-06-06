@@ -152,6 +152,10 @@ export class EventService {
     return this.yourNameEvent;
   }
 
+  public addUserToYourNameEvent(user: User){
+    this.yourNameEvent.attendees.push(user);
+  }
+
   public getMonsterEvents() {
     const monsterEvents = [];
     monsterEvents.push(this.events.find(f => f.id === 4));

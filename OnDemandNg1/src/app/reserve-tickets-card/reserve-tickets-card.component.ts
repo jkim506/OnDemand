@@ -22,7 +22,7 @@ export class ReserveTicketsCardComponent implements OnInit {
   }
 
   openModal(){
-    this.modal.open(ReserveTicketsModalComponent, new ReserveTicketsModalDataContext(this.event));
+    this.modal.open(ReserveTicketsModalComponent, {context: new ReserveTicketsModalDataContext(this.event)});
   }
 
 }

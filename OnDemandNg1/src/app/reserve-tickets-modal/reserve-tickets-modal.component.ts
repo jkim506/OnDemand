@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DialogRef, ModalComponent, CloseGuard } from 'angular2-modal';
+import { DialogRef, ModalComponent, CloseGuard, OverlayConfig } from 'angular2-modal';
 import { BSModalContext } from 'angular2-modal/plugins/bootstrap';
 import {Event} from '../models/event.model';
+import { EventService } from "../event.service";
+import { UsersService } from "app/users.service";
 
 export class ReserveTicketsModalDataContext extends BSModalContext {
   constructor(public event: Event) {
@@ -17,7 +19,10 @@ export class ReserveTicketsModalDataContext extends BSModalContext {
 export class ReserveTicketsModalComponent implements  CloseGuard, ModalComponent<ReserveTicketsModalDataContext> {
   context: ReserveTicketsModalDataContext;
 
-  constructor(public dialog: DialogRef<ReserveTicketsModalDataContext>) { 
+  constructor(
+    public dialog: DialogRef<ReserveTicketsModalDataContext>,
+    private eventService: EventService,
+    private userService: UsersService) { 
     this.context = dialog.context;
   }
 
@@ -29,8 +34,11 @@ export class ReserveTicketsModalComponent implements  CloseGuard, ModalComponent
   }
 
   close(){
-    console.log("Hi");
     this.dialog.close();
   }
 
+  reserveTickets(){
+    this.eventService.addUserToYourNameEvent(this.userService.activeUser);
+    this.dialog.close();
+  }
 }

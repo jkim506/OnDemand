@@ -46,6 +46,15 @@
           </div>
         </div>
       </div>
-
+    </div>
+    <div class="container other-films">
+      <div class="row">
+        <p>Other Events</p>
+      </div>
+      <div class="event-cards-container">
+        <div class="event-cards-row">
+          <app-event-card *ngFor="let event of events.slice(0, 4)" [event]="event"></app-event-card>
+        </div>
+      </div>
     </div>
   </section>

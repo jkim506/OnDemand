@@ -16,6 +16,7 @@ import { EventCardComponent } from './event-card/event-card.component';
 import { HttpModule } from '@angular/http';
 import { EventCardVerticalComponent } from './event-card-vertical/event-card-vertical.component';
 import { ReserveTicketsCardComponent } from './reserve-tickets-card/reserve-tickets-card.component';
+import { ForYouComponent } from './for-you/for-you.component';
 
 const ROUTES: Routes = [
   {
@@ -34,6 +35,10 @@ const ROUTES: Routes = [
   {
     path: 'event/new',
     component: CreateFormComponent
+  },
+    {
+    path: 'foryou',
+    component: ForYouComponent
   }
 ];
 
@@ -45,7 +50,8 @@ const ROUTES: Routes = [
     CreateFormComponent,
     EventCardComponent,
     EventCardVerticalComponent,
-    ReserveTicketsCardComponent
+    ReserveTicketsCardComponent,
+    ForYouComponent
   ],
   imports: [
     BrowserModule,

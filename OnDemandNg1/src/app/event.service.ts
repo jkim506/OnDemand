@@ -7,6 +7,19 @@ import { Event } from './models/event.model';
 @Injectable()
 export class EventService {
 
+  public yourNameEvent = {
+    id: 1,
+    eventOrganiser: this.userService.getTheArab(),
+    location: 'ABC Cinema screen 1',
+    description: 'test description',
+    capacity: 100,
+    approved: true,
+    attendees: new Array(99),
+    date: 'Saturday, 17th April',
+    time: '7:00 pm',
+    film: this.filmService.getFilm(7)
+  };
+
   public events: Event[] = [
     {
       id: 1,
@@ -108,19 +121,24 @@ export class EventService {
     return this.events.find(e => e.id === id) as Event;
   }
 
-  public addEvent(newEvent: Event) {
+  public addEvent(newEvent) {
     if (newEvent.id === 0) {
       // messy way to get the next id in the array;
       newEvent.id = this.events.reduce( (prev, curr) => {
         return (prev.id > curr.id) ? prev : curr;
       }).id + 1;
     }
-    this.events.push(newEvent);
+    this.yourNameEvent = newEvent;
+    this.events.unshift(newEvent);
   }
 
   public addUserToEvent(user: User, eventId: number) {
     const event = this.events.find(e => e.id == eventId);
     event.attendees.push(user);
+  }
+
+  public getYourNameEvent() {
+    return this.yourNameEvent;
   }
 
   public getMonsterEvents() {

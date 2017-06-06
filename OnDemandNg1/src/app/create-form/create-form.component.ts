@@ -71,7 +71,7 @@ export class CreateFormComponent implements OnInit {
       attendees: [],
       date: 'Sunday, 19th April',
       time: '9:00 pm',
-      film: null,
+      film: this.filmService.getFilm(7),
       format: '2D',
       screenType: 'Regular'
     }
@@ -98,6 +98,7 @@ export class CreateFormComponent implements OnInit {
     this.showFilmCard = true;
   }
   public createEvent() {
+    console.log(this.newEvent);
     this.eventService.addEvent(this.newEvent);
     this.pretendSaving = true;
     setTimeout(() => {

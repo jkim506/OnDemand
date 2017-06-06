@@ -1,4 +1,4 @@
-<div class="container event-card" (click)="goToEventDetails()" [@fadeInUp]="'in'">
+<div class="container event-card" (click)="goToEventDetails()" [@fadeInUp]="isVisible ? 'in' : '*'">
   <div class="row">
     <div class="col-md-12 thumbnail-container">
       <img src="{{event.film.image}}" class="thumbnail"/>

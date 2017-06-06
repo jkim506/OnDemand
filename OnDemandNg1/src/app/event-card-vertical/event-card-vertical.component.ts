@@ -9,16 +9,18 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./event-card-vertical.component.scss'],
   animations: [
     trigger('fadeInUp', [
+      state('*', style({ opacity: 0 })),
       state('in', style({ 'transform': 'translateY(0)', opacity: 1 })),
-      transition(':enter', [
+      transition('* => in', [
         style({ 'transform': 'translateY(20%)', opacity: 0 }),
-        animate(1000)
+        animate('700ms ease')
       ])
     ])
   ]
 })
 export class EventCardVerticalComponent implements OnInit {
   @Input() event: Event;
+  @Input() isVisible: boolean = false;
   private percentage: number;
 
   constructor(private router: Router) {

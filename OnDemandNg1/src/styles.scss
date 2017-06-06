@@ -61,3 +61,23 @@ a, a:active, a:visited {
   background: url(assets/icons/caret-black.png) center no-repeat;
   background-size: 0.5em;
 }
+
+.fade.in {
+  opacity: 1;
+}
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-backdrop.in {
+  opacity: 0.5;
+}
+
+.modal-content{
+  border: none;
+  background-color: transparent;
+}

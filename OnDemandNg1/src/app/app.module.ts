@@ -18,6 +18,10 @@ import { EventCardVerticalComponent } from './event-card-vertical/event-card-ver
 import { ReserveTicketsCardComponent } from './reserve-tickets-card/reserve-tickets-card.component';
 import { ForYouComponent } from './for-you/for-you.component';
 
+import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+import { ReserveTicketsModalComponent } from './reserve-tickets-modal/reserve-tickets-modal.component';
+
 const ROUTES: Routes = [
   {
     path: '',
@@ -51,6 +55,7 @@ const ROUTES: Routes = [
     EventCardComponent,
     EventCardVerticalComponent,
     ReserveTicketsCardComponent,
+    ReserveTicketsModalComponent,
     ForYouComponent
   ],
   imports: [
@@ -61,9 +66,12 @@ const ROUTES: Routes = [
     AlertModule.forRoot(),
     TypeaheadModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+    BootstrapModalModule
   ],
   providers: [ EventService, FilmService, UsersService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ ReserveTicketsModalComponent ]
 })
 export class AppModule { }

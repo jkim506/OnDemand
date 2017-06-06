@@ -21,7 +21,7 @@ export class EventService {
   };
 
   public events: Event[] = [
-    {
+    { // star wars
       id: 1,
       eventOrganiser: this.userService.getTheArab(),
       location: 'ABC Cinema screen 1',
@@ -32,7 +32,7 @@ export class EventService {
       time: '7:00 pm',
       film: this.filmService.getFilm(2)
     },
-    {
+    { // star wars
       id: 2,
       eventOrganiser: this.userService.getFirstUser(),
       location: 'ABC Cinema Screen 2',
@@ -43,7 +43,7 @@ export class EventService {
       time: '9:00 pm',
       film: this.filmService.getFilm(3)
     },
-    {
+    { // star wars
       id: 3,
       eventOrganiser: this.userService.getRandomUser(),
       location: 'Event Cinemas, Albany',
@@ -54,7 +54,7 @@ export class EventService {
       time: '8:00 pm',
       film: this.filmService.getFilm(4)
     },
-    {
+    { // godzilla
       id: 4,
       eventOrganiser: this.userService.getRandomUser(),
       location: 'Event Cinemas, Albany',
@@ -65,7 +65,7 @@ export class EventService {
       time: '8:00 pm',
       film: this.filmService.getFilm(16)
     },
-    {
+    { // ghost in the shell
       id: 5,
       eventOrganiser: this.userService.getRandomUser(),
       location: 'Berkeley Cinemas, Albany',
@@ -76,7 +76,7 @@ export class EventService {
       time: '5:15 pm',
       film: this.filmService.getFilm(19)
     },
-    {
+    { // king kong
       id: 6,
       eventOrganiser: this.userService.getRandomUser(),
       location: 'Berkeley Cinemas, Albany',
@@ -99,7 +99,7 @@ export class EventService {
       film: this.filmService.getFilm(21)
     },
     {
-      id: 7,
+      id: 8,
       eventOrganiser: this.userService.getRandomUser(),
       location: 'Event Cinemas, Albany',
       capacity: 220,
@@ -108,6 +108,17 @@ export class EventService {
       date: 'Sunday, 25th April',
       time: '3:00 pm',
       film: this.filmService.getFilm(9)
+    },
+    { // akira
+      id: 9,
+      eventOrganiser: this.userService.getRandomUser(),
+      location: 'Event Cinemas, Albany',
+      capacity: 220,
+      approved: true,
+      attendees: new Array(75),
+      date: 'Sunday, 25th April',
+      time: '6:00 pm',
+      film: this.filmService.getFilm(17)
     }
   ]
 
@@ -117,7 +128,7 @@ export class EventService {
     return this.events;
   }
 
-  public getEvent(id: number) : Event {
+  public getEvent(id: number): Event {
     return this.events.find(e => e.id === id) as Event;
   }
 
@@ -147,6 +158,21 @@ export class EventService {
     monsterEvents.push(this.events.find(f => f.id === 5));
     monsterEvents.push(this.events.find(f => f.id === 6));
     monsterEvents.push(this.events.find(f => f.id === 7));
+    return monsterEvents;
+  }
+  public getStarWarsEvents() {
+    const monsterEvents = [];
+    monsterEvents.push(this.events.find(f => f.id === 1));
+    monsterEvents.push(this.events.find(f => f.id === 2));
+    monsterEvents.push(this.events.find(f => f.id === 3));
+    return monsterEvents;
+  }
+
+  public getAnimeEvents() {
+    const monsterEvents = [];
+    console.log(this.events.find(f => f.id === 19));
+    monsterEvents.push(this.events.find(f => f.id === 19));
+    console.log(monsterEvents);
     return monsterEvents;
   }
 }

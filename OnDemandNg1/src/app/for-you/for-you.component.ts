@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../event.service';
+import { Event } from '../models/event.model';
 
 @Component({
   selector: 'app-for-you',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForYouComponent implements OnInit {
 
-  constructor() { }
+  public goodEvents: Event[];
+  public starwarsEvents: Event[];
+  public disneyEvents: Event[];
+
+  public events: Event[];
+
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    this.goodEvents = this.eventService.getMonsterEvents();
+    this.starwarsEvents = this.eventService.getStarWarsEvents();
   }
 
 }

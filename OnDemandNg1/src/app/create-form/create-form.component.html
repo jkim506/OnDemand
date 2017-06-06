@@ -22,7 +22,7 @@
       <div class="section-number">1</div>
       <div class="section-title">Choose the film you would like to request</div>
       <div class="film-select">
-        <input 
+        <input
           [(ngModel)]="selected"
           (typeaheadOnSelect)="filmSelected()"
           [typeahead]="films"
@@ -165,7 +165,7 @@
   <ng-container *ngIf="activeFormSection === 4">
     <div class="share-header">
       <h1>Your Event has been created!</h1>
-      <a class="fake-input form-button green-clear" href="">Manage Event</a>
+      <a class="fake-input form-button green-clear" routerLink="../../event/your-name">Manage Event</a>
     </div>
 
     <div class="seats">

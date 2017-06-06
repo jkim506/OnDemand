@@ -8,9 +8,13 @@ import { EventService } from '../event.service';
 })
 export class DetailComponent implements OnInit {
 
+  public event;
+
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    this.event = this.eventService.getYourNameEvent();
+    console.log(this.event);
   }
 
 }

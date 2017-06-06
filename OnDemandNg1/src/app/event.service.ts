@@ -119,8 +119,52 @@ export class EventService {
       date: 'Sunday, 25th April',
       time: '6:00 pm',
       film: this.filmService.getFilm(17)
+    },
+    { // Lion King
+      id: 10,
+      eventOrganiser: this.userService.getRandomUser(),
+      location: 'Berkley Cinemas, Takapuna',
+      capacity: 220,
+      approved: true,
+      attendees: new Array(198),
+      date: 'Tuesday, 13th June',
+      time: '6:00 pm',
+      film: this.filmService.getFilm(9)
+    },
+    { // Toy Story
+      id: 11,
+      eventOrganiser: this.userService.getRandomUser(),
+      location: 'Berkley Cinemas, Takapuna',
+      capacity: 220,
+      approved: true,
+      attendees: new Array(120),
+      date: 'Friday, 9th June',
+      time: '7:30 pm',
+      film: this.filmService.getFilm(22)
+    },
+    { // Little Mermaid
+      id: 12,
+      eventOrganiser: this.userService.getRandomUser(),
+      location: 'Event Cinemas, Albany',
+      capacity: 220,
+      approved: true,
+      attendees: new Array(83),
+      date: 'Wednesday, 14th June',
+      time: '8:00 pm',
+      film: this.filmService.getFilm(5)
+    },
+    { // Monsters, Inc.
+      id: 13,
+      eventOrganiser: this.userService.getRandomUser(),
+      location: 'Event Cinemas, Albany',
+      capacity: 220,
+      approved: false,
+      attendees: new Array(50),
+      date: 'Thursday, 15th June',
+      time: '6:00 pm',
+      film: this.filmService.getFilm(23)
     }
-  ]
+  ];
 
   constructor(private userService: UsersService, private filmService: FilmService) { }
 
@@ -177,7 +221,11 @@ export class EventService {
   }
 
   public getDisneyEvents() {
-    // TODO
-    return [];
+    const disneyEvents = [];
+    disneyEvents.push(this.events.find(f => f.id === 10));
+    disneyEvents.push(this.events.find(f => f.id === 11));
+    disneyEvents.push(this.events.find(f => f.id === 12));
+    disneyEvents.push(this.events.find(f => f.id === 13));
+    return disneyEvents;
   }
 }

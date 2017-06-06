@@ -1,0 +1,175 @@
+$border-color: rgba(0,0,0,0.2);
+$green: #48D5A3;
+
+.custom-modal-container {
+    background-color: white;
+    padding: 15px;
+    height: 549px;
+    width: 519px;
+    margin-top: 140px;
+    border: 1px solid black;
+
+    .custom-modal-header{
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .tickets{
+            font-family: Graphik;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.67;
+            text-align: left;
+            color: #000000;
+        }
+
+        .cross{
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            right: 0;
+        }
+
+        .tickets-question{
+            margin-top: -10px;
+            font-family: Graphik;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.44;
+            text-align: left;
+            color: #000000;
+        }
+    }
+
+    .tickets-section{
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .ticket-select-row{
+            margin-top: 12px;
+
+            p{
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            
+            .number-select{
+                width: 130px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #ffffff;
+                border: solid 1px #e4e4e4;
+
+                p{
+                    position: absolute;
+                    right: 40px;
+                }
+            }
+        }
+    }
+
+    .payments-section{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 25px;
+        margin-top: 25px;
+        border-top: 1px solid #e3e3e3;
+        
+
+        .checkbox {
+            display: block;
+            height: 26px;
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 15px;
+            line-height: 26px;
+            font-size: 14px;
+
+            &:before {
+                content: '';
+                height: 26px;
+                width: 26px;
+                border-radius: 50%;
+                border: 1px solid $border-color;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            &.selected:before {
+                background-color: $green;
+                border-color: darken($green, 5%);
+                background-image: url('../../assets/icons/check-white.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 12px;
+            }
+        }
+
+        .payments-header{
+            font-family: Graphik;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.67;
+            text-align: left;
+            color: #000000;
+        }
+
+        .card-number{
+            margin-top: 20px;
+
+            .card-number-text{
+                font-family: Graphik;
+                font-size: 24px;
+                text-align: left;
+                color: #000000;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .change-text{
+                padding: 0;
+                margin-left: -40px;
+                font-family: Graphik;
+                font-size: 14px;
+                text-align: left;
+                color: #2bd7a4;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .info{
+            margin-left: 35px;
+            font-family: Graphik;
+            font-size: 12px;
+            text-align: left;
+            color: #5c5c5c;
+            text-align:center; 
+            vertical-align: middle;
+            display: table-cell; 
+        }
+    }
+
+    .reserve{
+        margin-top: 30px;
+        margin-left: 20px;
+        width: 471px;
+        height: 61px;
+        border-radius: 4px;
+        background-color: #ce4ac6;
+
+        .reserve-text{
+            color: white;
+            font-size: 24px;
+            font-family: Graphik;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+    }
+}

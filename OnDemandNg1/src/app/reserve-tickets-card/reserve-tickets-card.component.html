@@ -1,4 +1,4 @@
-<div class="container event-card" (click)="goToEventDetails()">
+<div class="container event-card">
   <div class="row">
       <div class="col-md-12">
           <div class="details-container">
@@ -26,7 +26,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="bar">
+                <div class="bar" [ngStyle]="{ 'background-image': 'linear-gradient(left, #CE4AC6, #CE4AC6 ' + percentage + '%, transparent ' + percentage + '%, transparent 100%)', 
+                                              'background-image': '-webkit-linear-gradient(left, #CE4AC6, #CE4AC6 ' + percentage + '%, transparent ' + percentage + '%, transparent 100%)'}">
                 </div>
             </div>
             <div class="row top-margin-20">

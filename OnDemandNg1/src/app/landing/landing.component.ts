@@ -20,16 +20,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
   @ViewChild('verticalEventCardsContainer', { read: ViewContainerRef })
   private verticalEventCardsContainer: ViewContainerRef;
   private verticalEventCards: ComponentRef<EventCardVerticalComponent>[] = [];
-
-  public monsterEvents;
-  public events;
+  private events = this.eventService.getEvents();
 
   constructor(private eventService: EventService, private resolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    let events = this.eventService.getEvents();
+    let monsterEvents = this.eventService.getMonsterEvents();
     let $this = this;
-    events.forEach(function(event) {
+    monsterEvents.forEach(function(event) {
       console.log(event);
       $this.addVerticalEventCard(event);
     });

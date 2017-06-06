@@ -9,7 +9,7 @@ import { Event } from '../models/event.model';
 })
 export class ForYouComponent implements OnInit {
 
-  public goodEvents: Event[];
+  public monsterEvents: Event[];
   public starwarsEvents: Event[];
   public disneyEvents: Event[];
 
@@ -18,8 +18,8 @@ export class ForYouComponent implements OnInit {
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
-    this.goodEvents = this.eventService.getMonsterEvents();
+    this.monsterEvents = this.eventService.getMonsterEvents();
     this.starwarsEvents = this.eventService.getStarWarsEvents();
+    this.disneyEvents = this.eventService.getDisneyEvents();
   }
-
 }

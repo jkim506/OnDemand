@@ -175,4 +175,9 @@ export class EventService {
     console.log(monsterEvents);
     return monsterEvents;
   }
+
+  public getDisneyEvents() {
+    // TODO
+    return [];
+  }
 }

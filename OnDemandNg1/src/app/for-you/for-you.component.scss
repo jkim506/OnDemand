@@ -1,57 +1,60 @@
 @import '../shared';
 
-.form-container {
-    margin: 100px auto;
-    width: 1000px;
-}
-
-.form-header {
-    margin-left: 141px;
-    margin-bottom: 28px;
-    margin-top: 66px;
-    h2 {
-        font-family: sf;
-        font-weight: bold;
-        font-size: 30px;
-    }
+.recommendations-title {
+  margin-left: 10%;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  font-family: sf;
+  font-weight: bold;
+  font-size: 2em;
 }
 
 .near-you {
-    height: 50px;
-    background-color: #ce4ac6;
-    width: 100%;
-    text-align: center;
-    font-family: Graphik;
-    font-size: 17px;
-    font-weight: 500;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    span {
-        padding-bottom: 5px;
-        border-bottom: solid 1px rgba(255, 255, 255, 0.6);
-        &:after {
-            content: '▼';
-            font-size: 10px;
-            padding-left: 6px;
-            opacity: 0.9;
-        }
+  height: 50px;
+  background-color: #ce4ac6;
+  width: 100%;
+  text-align: center;
+  font-family: Graphik;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    padding-bottom: 5px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    &:after {
+      content: '▼';
+      font-size: 10px;
+      padding-left: 6px;
+      opacity: 0.9;
     }
-    img {
-        height: 30px;
-        width: 30px;
-        margin-right: 8px;
-    }
+  }
+  img {
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+  }
 }
 
-.event-cards-container-vertical {
+.event-cards-container {
+  @extend %event-cards-container;
+  padding-top: 25px;
+
+  > .event-cards-category-header {
+    margin: 30px 0 15px 0;
     display: flex;
-    justify-content: center;
-    width: 60%;
-    // app-event-card-vertical {
-    //     margin: 0 15px;
-    // }
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 10%;
+    h6 {
+      font-weight: bold;
+    }
+    span {
+      color: #7C7C7C;
+    }
+  }
 }
 
 .hero-food {

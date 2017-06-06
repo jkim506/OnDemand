@@ -12,7 +12,11 @@ export class UsersService {
   constructor() {
   }
 
-  public getUsers(): User[] {
+  public getUsers(count?): User[] {
+    if (count) {
+      console.log(this.users.slice(0, count))
+      return this.users.slice(0, count);
+    }
     return this.users;
   }
 
@@ -22,5 +26,9 @@ export class UsersService {
 
   public getTheArab(): User {
     return this.users[4];
+  }
+
+  public getRandomUser() {
+    return this.users[Math.floor(Math.random() * this.users.length)];
   }
 }

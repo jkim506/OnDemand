@@ -21,6 +21,9 @@ export class LandingComponent implements OnInit, AfterViewInit {
   private verticalEventCardsContainer: ViewContainerRef;
   private verticalEventCards: ComponentRef<EventCardVerticalComponent>[] = [];
 
+  public monsterEvents;
+  public events;
+
   constructor(private eventService: EventService, private resolver: ComponentFactoryResolver) { }
 
   ngOnInit() {

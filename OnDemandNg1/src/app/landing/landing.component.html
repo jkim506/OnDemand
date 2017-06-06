@@ -43,7 +43,8 @@
   <h1>Explore OnDemand films on now</h1>
   <div class="row-horizontal">
     <div class="fake-tabs">
-      <div class="active">Scheduled Sessions</div>
+      <div class="active">All Sessions</div>
+      <div>Scheduled Sessions</div>
       <div>Newly Created</div>
     </div>
     <div class="fake-buttons">
@@ -60,16 +61,10 @@
   </div>
   <div class="event-cards-container">
     <div class="event-cards-row">
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[0]"></app-event-card>
+      <app-event-card *ngFor="let event of events.slice(0, 4)" [event]="event"></app-event-card>
     </div>
     <div class="event-cards-row">
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
-      <app-event-card [event]="eventService.getEvents()[1]"></app-event-card>
+      <app-event-card *ngFor="let event of events.slice(4, 8)" [event]="event"></app-event-card>
     </div>
   </div>
 </div>

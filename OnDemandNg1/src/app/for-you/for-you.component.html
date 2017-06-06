@@ -1,0 +1,33 @@
+<div class="near-you">
+  <img src="/assets/ticket.png" />
+  <div>Found 102 <span>Sessions near you</span></div>
+</div>
+  <div class="form-header">
+    <h2>Community Recommendations</h2>
+  </div>
+<div class="form-container">
+  <h3>Recommended becasue you watched ‘Toy Story’</h3>
+  <div class="hero-event-cards">
+    <div class="event-cards-container-vertical">
+      <app-event-card-vertical *ngFor="let event of disneyEvents" [event]="event"></app-event-card-vertical>
+    </div>
+  </div>
+    <h3>Recommended becasue you like monster movies</h3>
+  <div class="hero-event-cards">
+    <div class="event-cards-container-vertical">
+      <app-event-card-vertical *ngFor="let event of goodEvents" [event]="event"></app-event-card-vertical>
+    </div>
+  </div>
+    <h3>Recommended becasue you work at vista</h3>
+  <div class="hero-event-cards">
+    <div class="event-cards-container-vertical">
+      <app-event-card-vertical *ngFor="let event of starwarsEvents" [event]="event"></app-event-card-vertical>
+    </div>
+  </div>
+</div>
+
+<div class="hero-food">
+  <h1>Get Social</h1>
+  <h3>Get 10 or more of your friends going to an OnDemand show and receive $40 toward food & Drink</h3>
+  <button class="btn-transparent">Request a Film</button>
+</div>

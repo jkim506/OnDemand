@@ -1,3 +1,5 @@
+@import '../shared';
+
 @mixin colored-circle($bgcolor, $fgcolor, $radius, $fontSize) {
   border-radius: 50%;
   min-width: $radius;
@@ -192,15 +194,6 @@
   }
 
   .btn-transparent {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 20px 50px;
-    font-family: sf;
-    font-size: 1.2em;
-    letter-spacing: 0.1em;
-    &:hover {
-      cursor: pointer;
-    }
+    @extend %btn-transparent;
   }
 }

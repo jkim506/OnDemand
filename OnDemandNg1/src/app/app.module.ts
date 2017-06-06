@@ -16,6 +16,7 @@ import { EventCardComponent } from './event-card/event-card.component';
 import { HttpModule } from '@angular/http';
 import { EventCardVerticalComponent } from './event-card-vertical/event-card-vertical.component';
 import { ReserveTicketsCardComponent } from './reserve-tickets-card/reserve-tickets-card.component';
+import { ForYouComponent } from './for-you/for-you.component';
 
 import { ModalModule } from 'angular2-modal';
 import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
@@ -38,6 +39,10 @@ const ROUTES: Routes = [
   {
     path: 'event/new',
     component: CreateFormComponent
+  },
+    {
+    path: 'foryou',
+    component: ForYouComponent
   }
 ];
 
@@ -50,7 +55,8 @@ const ROUTES: Routes = [
     EventCardComponent,
     EventCardVerticalComponent,
     ReserveTicketsCardComponent,
-    ReserveTicketsModalComponent
+    ReserveTicketsModalComponent,
+    ForYouComponent
   ],
   imports: [
     BrowserModule,

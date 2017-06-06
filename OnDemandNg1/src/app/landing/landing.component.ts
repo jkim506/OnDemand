@@ -28,7 +28,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     let monsterEvents = this.eventService.getMonsterEvents();
     let $this = this;
     monsterEvents.forEach(function(event) {
-      console.log(event);
       $this.addVerticalEventCard(event);
     });
   }
@@ -40,21 +39,21 @@ export class LandingComponent implements OnInit, AfterViewInit {
     this.verticalEventCards.push(newCard);
   }
 
-  private showCard(cardIndex) {
-    this.verticalEventCards[cardIndex].instance.isVisible = true;
-  }
-
-  ngAfterViewInit() {
+  private showCards() {
     let i = 0;
     let interval = setInterval(() => {
-      if (i > this.verticalEventCards.length ) {
+      if (i > this.verticalEventCards.length - 1) {
         clearInterval(interval);
       }
       else {
-        this.showCard(i);
+        this.verticalEventCards[i].instance.isVisible = true;
         i++;
       }
     }, 200);
+  }
+
+  ngAfterViewInit() {
+    this.showCards();
   }
 
 }

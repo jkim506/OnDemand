@@ -1,14 +1,14 @@
 export const USERS = [
   {
     "name": {
-      "title": "mrs",
-      "first": "misty",
-      "last": "romero"
+      "title": "mr",
+      "first": "Sunkee",
+      "last": "eey"
     },
     "picture": {
-      "large": "https://randomuser.me/api/portraits/women/59.jpg",
-      "medium": "https://randomuser.me/api/portraits/med/women/59.jpg",
-      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/59.jpg"
+      "large": "/assets/users/sunkeey.png",
+      "medium": "/assets/users/sunkeey.png",
+      "thumbnail": "/assets/users/sunkeey.png"
     }
   },
   {
